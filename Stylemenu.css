@@ -2,7 +2,11 @@
 .logo1{
     width:200px;
 }
-
+.nav-container{
+  position:absolute;
+  width: 100%;
+  
+}
 #menu ul li {
   background-color: #2e518b;
 }
@@ -52,4 +56,11 @@
 }
 #menu ul li:hover > ul {
   display: block;
+}
+.info{
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 300px;
+  border:black 1px solid;
+  z-index: -1;
 }
