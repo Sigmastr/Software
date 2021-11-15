@@ -1,0 +1,19 @@
+.logo1{
+    width:200px;
+}
+.nav-container{
+    width: 20%;
+}
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.menu__link:link, menu__link:visited,menu__link:active{
+    text-decoration: none;
+    color:inherit;
+}
+.menuitem{
+    text-align:left;
+}
