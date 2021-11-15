@@ -5,14 +5,14 @@
         <title>Software SegProject</title>
         <meta name="Descripción" content="Software de gestión">
         <link rel="stylesheet" href="Stylemenu.css">
-        <!--link rel="icon" href="SegProject.png"-->
+        <link rel="icon" href="SegProject.png">
         <script src="https://kit.fontawesome.com/be8c81ece6.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
             <div class="HeaderContainer">
                 <div class="Logo">
-                   <!--<img class="logo1" src="segproject.jpg">--> 
+                   <img class="logo1" src="segproject.jpg">
                 </div>
             </div>   
         </header>
@@ -37,12 +37,68 @@
                         <li class="submenu"><a href="#" class="menu__link"> Asignar OT a Supervisores</a></li>                                                                                         
                     </ul>
                 </li>
-                <li class="menuitem"><i class="fas fa-cart-arrow-down"></i><a href="#" class="menu__link">Adquisición</a></li>
-                <li class="menuitem"><i class="fas fa-user-tie"></i><a href="#" class="menu__link">Supervisor</a></li>
-                <li class="menuitem"><i class="fas fa-user"></i><a href="#" class="menu__link">Ejecutivo</a></li>
-                <li class="menuitem"><i class="fas fa-hard-hat"></i><a href="#" class="menu__link">Técnico</a></li>
-                <li class="menuitem"><i class="fas fa-archive"></i><a href="#" class="menu__link">Bodega</a></li>
-                <li class="menuitem"><i class="fas fa-users"></i><a href="#" class="menu__link">Cliente</a></li>
+                <li class="menuitem"><i class="fas fa-cart-arrow-down"></i><a href="#" class="menu__link">Adquisición</a>
+                        <ul class="submenu">
+                            <li class="submenu"><a href="#" class="menu__link">Pantalla CMI</a></li>
+                            <li class="submenu"><a href="#" class="menu__link">Proveedores</a></li>
+                            <li class="submenu"><a href="#" class="menu__link">Solicitud OC</a></li>
+                            <li class="submenu"><a href="#" class="menu__link">F–02 Devolución Bodega</a></li>
+                            <li class="submenu"><a href="#" class="menu__link">F–03 Solicitud a Bodega</a></li>
+                            <li class="submenu"><a href="#" class="menu__link">Generar Acta</a></li>
+                            <li class="submenu"><a href="#" class="menu__link">Generar Certificado de Garantía</a></li>
+                        </ul>
+                </li>
+                <li class="menuitem"><i class="fas fa-user-tie"></i><a href="#" class="menu__link">Supervisor</a>
+                    <ul class="submenu">
+                        <li class="submenu"><a href="#" class="menu__link">Pantalla CMI</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Clientes</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Generar Doctos Cierre</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">F–02 Devolución Bodega</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">F–03 Solicitud a Bodega</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Generar Acta</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Generar Certificado de Garantía</a></li>
+                    </ul>
+                </li>
+                <li class="menuitem"><i class="fas fa-user"></i><a href="#" class="menu__link">Ejecutivo</a>
+                    <ul class="submenu">
+                        <li class="submenu"><a href="#" class="menu__link">Pantalla CMI</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Clientes</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Estado OT / OM y Proyectos</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">F–02 Devolución Bodega</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">F–03 Solicitud a Bodega</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Generar Informe Técnico Simple</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Crear Presupuesto</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Generar Solicitud Orden de Compra</a></li>
+                    </ul>    
+                </li>
+                <li class="menuitem"><i class="fas fa-hard-hat"></i><a href="#" class="menu__link">Técnico</a>
+                    <ul class="submenu">
+                        <li class="submenu"><a href="#" class="menu__link">Pantalla CMI</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Estado Orden Asignada</a></li>
+                    </ul>    
+                
+                </li>
+                <li class="menuitem"><i class="fas fa-archive"></i><a href="#" class="menu__link">Bodega</a>
+                    <ul class="submenu">
+                        <li class="submenu"><a href="#" class="menu__link">Pantalla CMI</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Estado Orden de compras</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Solicitudes a Bodega</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Entrada y Salidas de Bodega</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Control inventario</a></li>
+                    </ul>  
+                </li>
+                <li class="menuitem"><i class="fas fa-users"></i><a href="#" class="menu__link">Cliente</a>
+                    <ul class="submenu">
+                        <li class="submenu"><a href="#" class="menu__link">Pantalla CMI</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Estado Proyecto</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Estado OT/OM y Proyectos</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Solicitar OT / OM</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Solicitar OT / OM</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Documentos Cierre</a></li>
+                        <li class="submenu"><a href="#" class="menu__link">Reportes</a></li>
+                    </ul>  
+                
+                </li>
             
             </ul>
 
