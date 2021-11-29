@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Tipo de servicio</title>
+        <link rel="icon" href="segproject.jpg">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="styleProveedor.css">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        
+        <nav class="sidebar">
+          <div class="logo-details">
+            
+              <div class="logo_name"> <img class="logo1" src="segproject.jpg" width=60%></div>
+              <i class='bx bx-menu' id="btn" ></i>
+          </div>
+          <ul class="nav-list">
+            
+            <li>
+              <a href="#">
+                <i class='bx bx-grid-alt'></i>
+                <span class="links_name">Ventas</span>
+                <li>
+              </a>
+               <span class="tooltip">Ventas</span>
+            </li>
+            <li>
+             <a href="#">
+               <i class='bx bx-user' ></i>
+               <span class="links_name">Adquisición</span>
+             </a>
+             <span class="tooltip">Adquisición</span>
+           </li>
+           <li>
+             <a href="#">
+               <i class='bx bx-chat' ></i>
+               <span class="links_name">Bodega</span>
+             </a>
+             <span class="tooltip">Bodega</span>
+           </li>
+           <li>
+             <a href="#">
+               <i class='bx bx-pie-chart-alt-2' ></i>
+               <span class="links_name">Ejecutivo</span>
+             </a>
+             <span class="tooltip">Ejecutivo</span>
+           </li>
+           <li>
+             <a href="#">
+               <i class='bx bx-folder' ></i>
+               <span class="links_name">Técnico</span>
+             </a>
+             <span class="tooltip">Técnico</span>
+           </li>
+           <li>
+             <a href="#">
+               <i class='bx bx-cart-alt' ></i>
+               <span class="links_name">Cliente</span>
+             </a>
+             <span class="tooltip">Cliente</span>
+           </li>
+          
+           
+           
+          </ul>
+        </nav>
+        <section class="home-section">
+          <div class="text">Administracion de Tipo de servicio</div>
+         
+          <div class="form-container">
+            
+                <section>
+                  <div class="form-container">
+                   
+                        <section>
+                            <div class="header-form-container">
+                                
+                                <div class="emerger">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                                        Ingresar Tipo de servicio
+                                      </button>
+                                      <button type="button" class="btn btn-success">Descargar en excel</button>
+                                    <!-- The Modal -->
+                                        <div class="modal" id="myModal">
+                                            <div class="modal-dialog">
+                                            <div class="modal-content">
+                                        
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                <h4 class="modal-title">Registro de un tipo de servicio</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                </div>
+                                        
+                                                <!-- Modal body -->
+                                                <div class="modal-body">
+                                                   
+                                                    <form class="row g-3" >
+                                                         
+                                                          
+                                                         
+                                                        <div class=" col-md-6">
+                                                            <label for="usr" class="form-label">Identificador:</label>
+                                                            <input type="text" class="form-control" id="usr" placeholder="Ingrese el id del servicio">
+                                                        </div>
+                                                          
+                                                        <div class="col-md-6">
+                                                            <label for="usr" class="form-label">Tipo de servicio:</label>                  
+                                                            <input type="text" class="form-control" id="usr" placeholder="Ingrese que tipo de servicio es. Ej:Servicio tecnico,mantencion,...">
+                                                        </div>
+                                                         
+                                                          
+                                                
+                            
+                                                      </form>
+                                                      
+                                                
+                                                    
+                                                </div>
+                                        
+                                                <!-- Modal footer -->
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-primary" type="submit">Registrar Cliente</button>
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                                </div>
+                                        
+                                            </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="table-container">
+                                <table class="table table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>Identificador</th>
+                                        <th>Tipo de servicio</th>
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                            
+                </section>
+          </div>  
+      
+          </div>
+         
+    
+
+          <script>
+            let sidebar = document.querySelector(".sidebar");
+            let closeBtn = document.querySelector("#btn");
+            let searchBtn = document.querySelector(".bx-search");
+          
+            closeBtn.addEventListener("click", ()=>{
+              sidebar.classList.toggle("open");
+              menuBtnChange();
+            });
+          
+            searchBtn.addEventListener("click", ()=>{ 
+              sidebar.classList.toggle("open");
+              menuBtnChange(); //calling the function(optional)
+            });
+          
+          
+            function menuBtnChange() {
+             if(sidebar.classList.contains("open")){
+               closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+             }else {
+               closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+             }
+            }
+            </script>
+    </body>
+
+</html>
