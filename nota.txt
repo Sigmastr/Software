@@ -1,0 +1,307 @@
+<div class="form-container">
+            <h1>Administración de Proveedores</h1>
+                <section>
+                    <div class="header-form-container">
+                        
+                        <div class="emerger">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                                Ingresar Proveedor
+                              </button>
+                              <button type="button" class="btn btn-success">Descargar en excel</button>
+                              <input class="     me-2" type="search" placeholder="Buscar proveedor" aria-label="Search">
+                              <button class="btn btn-outline-success" type="submit">Search</button>
+                            <!-- The Modal -->
+                                <div class="modal" id="myModal">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                        <h4 class="modal-title">Registro de Proveedor</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                           
+                                            <form class="row g-3" >
+                                                 
+                                                  
+                                                 
+                                                  <div class=" col-md-6">
+                                                    <label for="usr" class="form-label">Nombre Proveedor:</label>
+                                                    <input type="text" class="form-control" id="usr" placeholder="Ingrese nombre del proveedor">
+                                                  </div>
+                                                  
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Rut:</label>                  
+                                                    <input type="text" class="form-control" id="usr" placeholder="Ingrese rut del proveedor">
+                                                  </div>
+                                                 
+                                                  <div class="col-md-6">
+                                                    <label for="email" class="form-label">Nombre Empresa:</label>
+                                                    <input type="email" class="form-control" id="email" placeholder="Ingrese email">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Actividad:</label>                    
+                                                    <input type="text" class="form-control" id="usr" placeholder="Ingresa actividad del proveedor">
+                                                  </div>
+                                                  
+                                                  <div class="col-md-4">
+                                                    <label for="usr" class="form-label">País:</label>                  
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese país">
+                                                  </div>
+                                                  <div class="col-md-4">
+                                                    <label for="usr" class="form-label">Región:</label>                    
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese región">                                           
+                                                  </div>
+                                                  <div class="col-md-4">
+                                                    <label for="usr" class="form-label">Ciudad:</label>                   
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese ciudad">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Comuna:</label>                    
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese comuna">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Dirección:</label>                   
+                                                    <input type="text" class="form-control" id="usuario" placeholder="Ingrese dirección">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Banco de Proveedor:</label>                    
+                                                    <input type="date" class="form-control" name="usuario" id="usuario" >
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Número de Cuenta:</label>                    
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" >
+                                                  </div>
+                                                  
+                                                  
+                                                  <div class="col-md-12">
+                                                    <label class="form-label">Linea de Crédito:</label>                    
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese la linea de crédito">
+                                                  </div> 
+                                                  <div class="col-md-12">
+                                                    <label class="form-label">Correo:</label>                    
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese la linea de crédito">
+                                                  </div> 
+                                        
+                    
+                                              </form>
+                                              
+                                        
+                                            
+                                        </div>
+                                
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary" type="submit">Registrar Proveedor</button>
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                        </div>
+                                
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Nombre</th>
+                            <th>Rut</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+                </section>
+          </div>
+            --------------------------------------------------------------------------------------------------------------
+             <form class="row g-3" >
+                                                 
+                                                  
+                                                 
+                                                  <div class=" col-md-6">
+                                                    <label for="usr" class="form-label">Nombre:</label>
+                                                    <input type="text" class="form-control" id="usr" placeholder="Ingrese nombre del proveedor">
+                                                  </div>
+                                                  
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Descripción:</label>                  
+                                                    <input type="text" class="form-control" id="usr" placeholder="Ingrese rut del proveedor">
+                                                  </div>
+                                                 
+                                                  <div class="col-md-6">
+                                                    <label for="email" class="form-label">Categoría:</label>
+                                                    <input type="email" class="form-control" id="email" placeholder="Ingrese email">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Subcategoría:</label>                    
+                                                    <input type="text" class="form-control" id="usr" placeholder="Ingresa actividad del proveedor">
+                                                  </div>
+                                                  
+                                                  <div class="col-md-4">
+                                                    <label for="usr" class="form-label">Alerta Stock:</label>                  
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese país">
+                                                  </div>
+                                                  <div class="col-md-4">
+                                                    <label for="usr" class="form-label">Stock mínimo:</label>                    
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese región">                                           
+                                                  </div>
+                                                  <div class="col-md-4">
+                                                    <label for="usr" class="form-label">Precio compra neto:</label>                   
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese ciudad">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Precio lista neto:</label>                    
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese comuna">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Unidad de medida:</label>                   
+                                                    <input type="text" class="form-control" id="usuario" placeholder="Ingrese dirección">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Código de producto:</label>                    
+                                                    <input type="date" class="form-control" name="usuario" id="usuario" >
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Afecto/Exento:</label>                    
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" >
+                                                  </div>
+                                                  
+                                                  
+                                                  <div class="col-md-12">
+                                                    <label class="form-label">Tabla lista:</label>                    
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese la linea de crédito">
+                                                  </div> 
+                                                  <div class="col-md-12">
+                                                    <label class="form-label">Impuesto adicional:</label>                    
+                                                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese la linea de crédito">
+                                                  </div> 
+                                                  <div class="col-md-12">
+                                                    <div class="custom-file">
+                                                       
+                                                        <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                                                          
+                                                      </div>
+                                                  </div>
+                                                  ----------------------------------------------------------------------------------
+                                 <div class="form-container">
+            <h1>Administración de Información del producto</h1>
+                <section>
+                    <div class="header-form-container">
+                        
+                        <div class="emerger">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                                Ingresar SubCategoría
+                              </button>
+                              <button type="button" class="btn btn-success">Descargar en excel</button>
+                              <input class="     me-2" type="search" placeholder="Buscar SubCategoría" aria-label="Buscar">
+                              <button class="btn btn-outline-success" type="submit">Buscar</button>
+                            <!-- The Modal -->
+                                <div class="modal" id="myModal">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                        <h4 class="modal-title">Registro SubCategorías</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                           
+                                            <form class="row g-3" >
+                                                 
+                                                  
+                                                 
+                                                  <div class=" col-md-6">
+                                                    <label for="usr" class="form-label">Identificador:</label>
+                                                    <input type="text" class="form-control" id="usr" placeholder="Ingrese una identificación/codigo de la unidad">
+                                                  </div>
+                                                  
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Nombre:</label>                  
+                                                    <input type="text" class="form-control" id="usr" placeholder="ingrese el nombre de la sub categoría">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="usr" class="form-label">Subcategoría:</label>                  
+                                                    <input type="text" class="form-control" id="usr" placeholder="ingrese el nombre de la sub categoría">
+                                                  </div>
+                                                  <div class=" col-md-6">
+                                                    <select class="custom-select">
+                                                        <option selected>Despliegue el menú</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                      </select>
+                                                  </div>
+                                                  
+                                                  
+                    
+                                              </form>
+                                              
+                                        
+                                            
+                                        </div>
+                                
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary" type="submit">Registrar SubCategoría</button>
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                        </div>
+                                
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Identificador</th>
+                            <th>Nombre</th>
+                            <th>Categoria</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            
+                            
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            
+                            
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+                </section>
+          </div>
