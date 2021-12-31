@@ -12344,7 +12344,11 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
 
 .content-wrapper > .content {
   padding: 0 0.5rem;
+ 
 }
+
+
+
 
 .main-sidebar, .main-sidebar::before {
   transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
