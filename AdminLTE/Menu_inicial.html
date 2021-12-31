@@ -369,8 +369,79 @@ scratch. This page gets rid of all links and provides the needed markup only.
           
                 <!-- Modal Header -->
                 <div class="modal-header">
-                  <h4 class="modal-title">Modal Heading</h4>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <form class="row g-3" method="POST" >
+                                                         
+                                                          
+                                                         
+                    <div class=" col-md-6">
+                      <label for="usr" class="form-label">Nombre Cliente:</label>
+                      <input type="text" class="form-control" id="usr" placeholder="Ingrese nombre de Cliente">
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="usr" class="form-label">Rut:</label>                  
+                      <input type="text" class="form-control" id="usr" placeholder="Ingrese rut de cliente">
+                    </div>
+                   
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Correo:</label>
+                      <input type="email" class="form-control" id="email" placeholder="Ingrese email">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="usr" class="form-label">Actividad:</label>                    
+                      <input type="text" class="form-control" id="usr" placeholder="Ingresa actividad del cliente">
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <label for="usr" class="form-label">País:</label>                  
+                      <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese país">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="usr" class="form-label">Región:</label>                    
+                      <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese región">                                           
+                    </div>
+                    <div class="col-md-4">
+                      <label for="usr" class="form-label">Ciudad:</label>                   
+                      <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese ciudad">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="usr" class="form-label">Comuna:</label>                    
+                      <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese comuna">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="usr" class="form-label">Dirección:</label>                   
+                      <input type="text" class="form-control" id="usuario" placeholder="Ingrese dirección">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="usr" class="form-label">Plazo de pago:</label>                    
+                      <input type="date" class="form-control" name="usuario" id="usuario" >
+                    </div>
+                    <div class="col-md-6">
+                      <label for="usr" class="form-label">Estado de pago:</label>                    
+                      <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Recibido/En espera/.../">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="usr" class="form-label">Contacto de pago:</label>                    
+                      <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese el nombre del contacto de pago">
+                    </div>  
+                    <div class="col-md-4">
+                      <label for="usr" class="form-label">Teléfono de pago</label>  
+                      <br>      
+                      <br>                        
+                      <input type="text"  class="form-control" id="usr-number" placeholder="Teléfono de pago"/>
+                    </div> 
+                    <div class="col-md-4">
+                      <label class="form-label">Direccion de pagos:</label>                    
+                      <input type="text" class="form-control" name="usr" id="usuario" placeholder="Ingrese dirección de pago">
+                    </div> 
+                    
+                    <div class="col-md-12">
+                      <label class="form-label">Linea de Crédito:</label>                    
+                      <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese la linea de crédito">
+                    </div> 
+          
+
+                </form>
                 </div>
           
                 <!-- Modal body -->
@@ -380,7 +451,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
           
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-success">Registrar</button>
                 </div>
           
               </div>
