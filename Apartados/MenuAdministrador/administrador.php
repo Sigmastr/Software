@@ -114,19 +114,19 @@ include('../../Conexion/conexion.php');
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="pages/layout/top-nav.html" class="nav-link active">
+                  <a href="administrador.php" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Inicio</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                  <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Configuración</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/layout/boxed.html" class="nav-link">
+                  <a href="../Maestro/Maestro.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Maestros</p>
                   </a>
@@ -143,7 +143,7 @@ include('../../Conexion/conexion.php');
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="../Adquisiciones/FichaProveedor.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Ficha Proveedor</p>
                   </a>
@@ -190,7 +190,7 @@ include('../../Conexion/conexion.php');
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="../Bodega/Bodega.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Ficha Bodega</p>
                   </a>
@@ -244,14 +244,14 @@ include('../../Conexion/conexion.php');
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="pages/tables/data.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Estado ST - SM - SD - SP
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/data.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Conformación Servicio ST - SM - SD - SP
                     </p>
@@ -259,63 +259,63 @@ include('../../Conexion/conexion.php');
                 </li>
                 <!-- <li class="nav-header">Servicio Tecnico</li> -->
                 <li class="nav-item">
-                  <a href="pages/tables/data.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Solicitud de ST
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Check List
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Actas de Cierre
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Guía de Servicio
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Informe Técnico
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Solicitud de Materiales
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Presupuesto
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Cotización
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Conformación Servicio
                     </p>
@@ -323,21 +323,21 @@ include('../../Conexion/conexion.php');
                 </li>
 
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Reportes especificos
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Cuadros de mando Soporte Técnico
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Correos Informativos y Alertas
                     </p>
@@ -345,84 +345,84 @@ include('../../Conexion/conexion.php');
                 </li>
                 <li class="nav-header">Servicio Mantención</li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Conformación Servicio
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Reportes especificos
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Check List
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Actas de Cierre
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Informe Técnico
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Solicitud de Materiales
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Presupuesto
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Cotización
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Conformación Servicio
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Reportes especificos
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Cuadros de mando Soporte Mantención
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Correos Informativos y Alertas
                     </p>
@@ -441,14 +441,14 @@ include('../../Conexion/conexion.php');
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="pages/tables/data.html" class="nav-link">
+                  <a href="../Cliente/FichaCliente.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Ficha Cliente
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/tables/data.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Reportes especificos
                     </p>
@@ -456,7 +456,7 @@ include('../../Conexion/conexion.php');
                 </li>
                 <!-- <li class="nav-header">Servicio Tecnico</li> -->
                 <li class="nav-item">
-                  <a href="pages/tables/data.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Cuadro de Mando
                     </p>
@@ -583,32 +583,31 @@ include('../../Conexion/conexion.php');
               <div class="modal-body">
 
 
-                <form method="POST">
+                <form method="POST" action="../../PhP/INSERTAR_TipoContrato.php">
 
                   <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
                     Tipo de Contrato</h4>
                   <div class="form-row">
                     <div class="form-group col-md-6" style>
-                      <label for="inputPeriodo">Periodo de Acceso:</label>
+                      <label for="inputPeriodo">Servicio a dar:</label>
                       <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-user"></i>
                         </div>
-                        <input type="text" class="form-control" id="PeriodoAcceso" placeholder="Servicio Técnico, mantención,etc">
+                        <input type="text" class="form-control" name="PeriodoAcceso" id="PeriodoAcceso" placeholder="Fijo, indefinido,etc">
                       </div>
 
                     </div>
 
 
                   </div>
-
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                  </div>
                 </form>
 
+              </div>
 
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Agregar</button>
-              </div>
             </div>
           </div>
         </div>
@@ -626,8 +625,8 @@ include('../../Conexion/conexion.php');
               <div class="modal-body">
 
 
-                <form method="POST">
-                  @csrf
+                <form method="POST" action="../../PhP/INSERTAR_EstadoCliente_Sistema.php">
+
                   <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
                     Estado Cliente en el sistema</h4>
                   <div class="form-row">
@@ -636,22 +635,22 @@ include('../../Conexion/conexion.php');
                       <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-user"></i>
                         </div>
-                        <input type="text" class="form-control" id="PeriodoAcceso" placeholder="15 días,30 días,60, etc">
+                        <input type="text" class="form-control" name="EstadoCliente" id="EstadoCliente" placeholder="15 días,30 días,60, etc">
                       </div>
 
                     </div>
 
 
                   </div>
-
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                  </div>
                 </form>
 
 
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Agregar</button>
-              </div>
+
             </div>
           </div>
         </div>
@@ -664,14 +663,21 @@ include('../../Conexion/conexion.php');
               <!-- small box -->
               <div class="small-box bg-warning">
                 <div class="inner">
-                  <h3>n° </h3>
+                  <?php
+                  $sql = "SELECT * FROM cliente";
+                  $resultado = mysqli_query($conn, $sql);
+                  $row = mysqli_num_rows($resultado);
+                  ?>
+                  <h3><?php
+                      echo $row;
+                      ?> </h3>
 
                   <p>Clientes</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-person-add"></i>
                 </div>
-                <a href="#" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="../Cliente/FichaCliente.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
 
@@ -679,9 +685,16 @@ include('../../Conexion/conexion.php');
               <!-- small box -->
               <div class="small-box bg-success">
                 <div class="inner">
-                  <h3>n° </h3>
+                  <h3> <?php
+                        $sql = "SELECT * FROM proyecto";
+                        $resultado = mysqli_query($conn, $sql);
+                        $row = mysqli_num_rows($resultado);
+                        ?>
+                    <h3><?php
+                        echo $row;
+                        ?> </h3>
 
-                  <p>Proyectos</p>
+                    <p>Proyectos</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-stats-bars"></i>
@@ -708,14 +721,23 @@ include('../../Conexion/conexion.php');
               <!-- small box -->
               <div class="small-box bg-blue">
                 <div class="inner">
-                  <h3>n° </h3>
+                  <?php
+                  $sql = "SELECT * FROM empleado";
+                  $resultado = mysqli_query($conn, $sql);
+                  $row = mysqli_num_rows($resultado);
+                  ?>
+                  <h3><?php
+                      echo $row;
+                      ?>
+                  </h3>
 
-                  <p>Estado de Clientes</p>
+
+                  <p>Cantidad de empleados</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-person-add"></i>
                 </div>
-                <a href="#" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="../Empleado/ConfiguracionEmpleado.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
 
@@ -737,14 +759,22 @@ include('../../Conexion/conexion.php');
               <!-- small box -->
               <div class="small-box bg-red">
                 <div class="inner">
-                  <h3>n° </h3>
+                  <?php
+                  //no reconocerá a los solitarios, solo dúos
+                  $sql = "SELECT * FROM cuadrilla WHERE Tipo_cuadrilla='Duo'";
+                  $resultado = mysqli_query($conn, $sql);
+                  $row = mysqli_num_rows($resultado);
+                  ?>
+                  <h3><?php
+                      echo $row;
+                      ?> </h3>
 
                   <p>Grupos de Trabajo</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-clipboard"></i>
                 </div>
-                <a href="#" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="../Empleado/ConfiguracionEmpleado.php" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
 
@@ -752,9 +782,15 @@ include('../../Conexion/conexion.php');
               <!-- small box -->
               <div class="small-box bg-info">
                 <div class="inner">
-                  <h3>n°</h3>
-
-                  <p>Bodegas</p>
+                  <?php
+                  // $sql = "SELECT * FROM bodega";
+                  // $resultado = mysqli_query($conn, $sql);
+                  // $row = mysqli_num_rows($resultado);
+                  ?>
+                  <h3>
+                    n°
+                  </h3>
+                  <p>Servicio Técnico</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-bag"></i>
