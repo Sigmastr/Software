@@ -20,15 +20,15 @@
 
     <form action="./Inicio-Sesion/Validar.php" method="POST">
 
-    <img src="./recursos/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8" >
+        <img src="./recursos/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8">
 
-    <h1>Segproject | Inicio de Sesión</h1>
+        <h1>Segproject | Inicio de Sesión</h1>
 
-    <p>Correo <input type="text" placeholder="Ingrese su Correo Registrado" name="Email"></p>
+        <p>Correo <input required type="text" placeholder="Ingrese su Correo Registrado" name="Email"></p>
 
-    <p>Contraseña <input type="password" placeholder="Ingrese su Contraseña" name="Contrasenaa"></p>
+        <p>Contraseña <input required type="password" placeholder="Ingrese su Contraseña" name="Contrasenaa"></p>
 
-    <input type="submit" value="Ingresar">
+        <input type="submit" value="Ingresar">
 
 
 

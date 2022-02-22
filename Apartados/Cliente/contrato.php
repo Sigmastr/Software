@@ -1,5 +1,9 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 include('../../Conexion/conexion.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +15,10 @@ include('../../Conexion/conexion.php');
     <title>Sección Empleados</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
-
+    <link rel="stylesheet" href="bs-stepper.min.css">
     <!-- Styles por pasos -->
-    <link rel="stylesheet" href="steps.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-stepper/dist/css/bs-stepper.min.css">
+    <script src="https://unpkg.com/bs-stepper/dist/js/bs-stepper.min.js"></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="../../recursos/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
@@ -25,6 +30,7 @@ include('../../Conexion/conexion.php');
     <!--DataTables-->
     <link rel="stylesheet" href="../../recursos/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../../recursos/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../Apartados/Cliente/Style.css">
 </head>
 
 
@@ -492,7 +498,7 @@ include('../../Conexion/conexion.php');
                                     <!-- Aquí poner los botones -->
                                     <!-- Button trigger modal -->
                                     <div class="botones" style="margin-bottom:1%; margin-top:1%">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#FichaEmpleado">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Contrato">
                                             Ingresar Contrato
                                         </button>
 
@@ -500,316 +506,554 @@ include('../../Conexion/conexion.php');
                                     </div>
 
                                     <!-- Modal -->
-                                    <div class="modal fade" id="FichaEmpleado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="Contrato" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-lg" role="document">
                                             <div class="modal-content">
-                                                <div class="modal-header" style="background-color:#EEE71A">
+                                                <div class="modal-header" style="background-color:#13A31C">
                                                     <h5 class="modal-title" style="color:white" id="exampleModalLabel">Ficha contrato</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
+                                                    <div class="mb-5 p-4 bg-white shadow-sm">
 
-
-                                                    <form method="POST" action="../../PhP/INSERTAR_EMPLEADO.php">
-                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #6B90F3;">
-                                                            Datos de emisión</h4>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text" style="background-color:red">Folio:
-                                                                    </div>
-                                                                    <input type="number" class="form-control" name="folio" id="folio" oninput="this.className = ''">
+                                                        <h3>Contrato de servicios</h3>
+                                                        <div id="stepper1" class="bs-stepper">
+                                                            <div class="bs-stepper-header" role="tablist">
+                                                                <div class="step" data-target="#test-l-1">
+                                                                    <button type="button" class="step-trigger" role="tab" id="stepper1trigger1" aria-controls="test-l-1">
+                                                                        <span class="bs-stepper-circle">1</span>
+                                                                        <span class="bs-stepper-label">Detalle del contrato</span>
+                                                                    </button>
                                                                 </div>
-
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text">Emisión
-                                                                    </div>
-                                                                    <input type="date" class="form-control" name="Femision" id="Femision" oninput="this.className = ''">
+                                                                <div class="bs-stepper-line"></div>
+                                                                <div class="step" data-target="#test-l-2">
+                                                                    <button type="button" class="step-trigger" role="tab" id="stepper1trigger2" aria-controls="test-l-2">
+                                                                        <span class="bs-stepper-circle">2</span>
+                                                                        <span class="bs-stepper-label">Servicios contratados</span>
+                                                                    </button>
                                                                 </div>
-
+                                                                <div class="bs-stepper-line"></div>
+                                                                <div class="step" data-target="#test-l-3">
+                                                                    <button type="button" class="step-trigger" role="tab" id="stepper1trigger3" aria-controls="test-l-3">
+                                                                        <span class="bs-stepper-circle">3</span>
+                                                                        <span class="bs-stepper-label">Detalle equipos
+                                                                        </span>
+                                                                    </button>
+                                                                </div>
                                                             </div>
+                                                            <div class="bs-stepper-content">
+                                                                <form onSubmit="return false" id="formulario" method="POST" action="../../PhP/INSERTAR_contrato.php">
+                                                                    <div id="test-l-1" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepper1trigger1">
+                                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #6B90F3;">
+                                                                            Datos de emisión</h4>
+                                                                        <div class="form-row">
+                                                                            <div class="form-group col-md-6">
 
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text" style="background-color:red">Folio:
+                                                                                    </div>
+                                                                                    <input type="number" class="form-control" name="folio" id="folio">
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="form-group col-md-6">
+
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text">Emisión
+                                                                                    </div>
+                                                                                    <input type="date" class="form-control" name="Femision" id="Femision">
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                        <div class="form-row">
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNombreCliente">Cliente:</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
+                                                                                    </div>
+                                                                                    <select class="form-control" name="cliente" id="cliente">
+                                                                                        <?php
+                                                                                        $sql = ("SELECT * FROM cliente");
+                                                                                        $query = $conn->query($sql);
+                                                                                        while ($valores = mysqli_fetch_array($query)) {
+                                                                                            echo '<option value="' . $valores['Rut'] . '">' . $valores['Nombre'] . '</option>';
+                                                                                        }
+                                                                                        ?>
+                                                                                    </select>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputEmail">Fecha de inicio</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-calendar-alt"></i>
+                                                                                    </div>
+                                                                                    <input type="date" class="form-control" name="Finicio" id="Finicio">
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class=" form-row">
+
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNombreEmpleado">Tipo de contrato</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-newspaper"></i>
+                                                                                    </div>
+                                                                                    <select class="form-control" name="tcontrato" id="tcontrato">
+                                                                                        <?php
+                                                                                        $sql = ("SELECT * FROM tipocontrato");
+                                                                                        $query = $conn->query($sql);
+                                                                                        while ($valores = mysqli_fetch_array($query)) {
+                                                                                            echo '<option value="' . $valores['id_tipoContrato'] . '">' . $valores['Tipo'] . '</option>';
+                                                                                        }
+                                                                                        ?>
+
+                                                                                    </select>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputEmail">Email</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-envelope"></i>
+                                                                                    </div>
+                                                                                    <input type="email" class="form-control" name="Email" id="Email" placeholder="contacto@dominio.com">
+                                                                                </div>
+
+                                                                            </div>
+
+
+                                                                        </div>
+                                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #4437ff;">
+                                                                            Características del cliente</h4>
+
+                                                                        <div class="form-row">
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNombreEmpleado">Tipo de instalación</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
+                                                                                    </div>
+                                                                                    <select class="form-control" name="tinstalacion" id="tinstalacion">
+                                                                                        <?php
+                                                                                        $sql = ("SELECT * FROM tipoinstalacion");
+                                                                                        $query = $conn->query($sql);
+                                                                                        while ($valores = mysqli_fetch_array($query)) {
+                                                                                            echo '<option value="' . $valores['id_tipoIns'] . '">' . $valores['Tipo'] . '</option>';
+                                                                                            //por defecto se creará como libre
+                                                                                        }
+                                                                                        ?>
+
+                                                                                    </select>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNombreEmpleado">Nombre de instalación</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
+                                                                                    </div>
+                                                                                    <input type="text" class="form-control" name="NameInst" id="NameInst" placeholder="Edificio el bosque...">
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- <div class="form-row">
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNombreEmpleado">Dirección</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
+                                                                                    </div>
+                                                                                    <input type="text" class="form-control" name="address" id="address" placeholder="Edificio el bosque...">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputCiudad">Comuna</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
+                                                                                    </div>
+                                                                                    <select class="form-control" name="comuna" id="comuna">
+                                                                                       
+
+                                                                                    </select>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div> -->
+                                                                        <div class="form-row">
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNarea">Área del contrato:</label>
+                                                                                <div class="checkbox-card">
+                                                                                    <div class="form-group col-md-20">
+                                                                                        <div class="checkbox">
+                                                                                            <label class="form-group col-md-10">
+                                                                                                <input type="checkbox" style="margin-left: -5%;" name="Tipoarea[]" value="1" class="checkme">Hall Acceso
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="recursos-box">
+                                                                                            <input type="text" name="Cant[]" placeholder="Cantidad de Empleados..." class="form-control">
+                                                                                        </div>
+                                                                                        <div class="checkbox">
+                                                                                            <label class="form-group col-md-10">
+                                                                                                <input type="checkbox" style="margin-left: -5%" name="Tipoarea[]" value="2" class="checkme2">Bodega 1 Común
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="recursos-box2">
+                                                                                            <input type="text" name="Cant[]" placeholder="Cantidad de Empleados..." class="form-control">
+                                                                                        </div>
+                                                                                        <div class="checkbox">
+                                                                                            <label class="form-group col-md-10">
+                                                                                                <input type="checkbox" style="margin-left: -5%" name="Tipoarea[]" value="3" class="checkme3">Bodega 2 Común
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="recursos-box3">
+                                                                                            <input type="text" name="Cant[]" placeholder="Cantidad de Empleados..." class="form-control">
+                                                                                        </div>
+                                                                                        <div class="checkbox">
+                                                                                            <label class="form-group col-md-10">
+                                                                                                <input type="checkbox" style="margin-left: -5%" name="Tipoarea[]" value="4" class="checkme4">Bodega 3 Común
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="recursos-box4">
+                                                                                            <input type="text" name="Cant[]" placeholder="Cantidad de Empleados..." class="form-control">
+                                                                                        </div>
+                                                                                        <div class="checkbox">
+                                                                                            <label class="form-group col-md-10">
+                                                                                                <input type="checkbox" style="margin-left: -5%" name="Tipoarea[]" value="9" class="checkme5">Estacionamiento
+                                                                                        </div>
+                                                                                        <div class="recursos-box5">
+                                                                                            <input type="text" name="Cant[]" placeholder="Cantidad de Empleados..." class="form-control">
+                                                                                        </div>
+                                                                                        <div class="checkbox">
+                                                                                            <label class="form-group col-md-10">
+                                                                                                <input type="checkbox" style="margin-left: -5%" name="Tipoarea[]" value="10" class="checkme6">Sala
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="recursos-box6">
+                                                                                            <input type="text" name="Cant[]" placeholder="Cantidad de Empleados..." class="form-control">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-row">
+                                                                                <div class="form-group col-md-50">
+                                                                                    <label></label>
+                                                                                    <div class="checkbox-card">
+                                                                                        <div class="form-group col-md-100">
+                                                                                            <div class="checkbox">
+                                                                                                <label class="form-group col-md-40">
+                                                                                                    <input type="checkbox" style="margin-left: -2%" name="Tipoarea[]" value="11" class="checkme7">Gimnasio
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="recursos-box7">
+                                                                                                <input type="text" name="Cant[]" placeholder="Cantidad de Empleados..." class="form-control">
+                                                                                            </div>
+                                                                                            <div class="checkbox">
+                                                                                                <label class="form-group col-md-40">
+                                                                                                    <input type="checkbox" style="margin-left: -2%" name="Tipoarea[]" value="12" class="checkme8">Cafetería - Casino
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="recursos-box8">
+                                                                                                <input type="text" name="Cant[]" placeholder="Cantidad de Empleados..." class="form-control">
+                                                                                            </div>
+                                                                                            <div class="checkbox">
+                                                                                                <label class="form-group col-md-40">
+                                                                                                    <input type="checkbox" style="margin-left: -2%" name="Tipoarea[]" value="13" class="checkme9">Quincho
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="recursos-box9">
+                                                                                                <input type="text" name="Cant[]" placeholder="Cantidad de Empleados..." class="form-control">
+                                                                                            </div>
+                                                                                            <div class="checkbox">
+                                                                                                <label class="form-group col-md-40">
+                                                                                                    <input type="checkbox" style="margin-left: -2%" name="Tipoarea[]" value="14" class="checkme10">Terraza
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="recursos-box10">
+                                                                                                <input type="text" name="Cant[]" placeholder="Cantidad de Empleados..." class="form-control">
+                                                                                            </div>
+                                                                                            <div class="checkbox">
+                                                                                                <label class="form-group col-md-40">
+                                                                                                    <input type="checkbox" style="margin-left: -2%" name="Tipoarea[]" value="15" class="checkme11">Oficina
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="recursos-box11">
+                                                                                                <input type="text" name="Cant[]" placeholder="Cantidad de Empleados..." class="form-control">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button class="btn btn-primary" style="margin-right: 40%;" onclick="stepper1.next()">Siguiente</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="test-l-2" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepper1trigger2">
+
+                                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #6B90F3;">
+                                                                            Servicios Contratados</h4>
+
+                                                                        <div class="form-row">
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNombreEmpleado">Tipo de Servicio:</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
+                                                                                    </div>
+                                                                                    <select id="listaservicio" class="form-control" name="listservicio" id="listservicio">
+                                                                                        <option value="0">Selecione un Servicio</option>
+                                                                                        <?php
+
+
+                                                                                        $sql = ("SELECT * FROM listaservicio");
+                                                                                        $query = $conn->query($sql);
+                                                                                        while ($valores = mysqli_fetch_array($query)) {
+                                                                                            echo '<option value="' . $valores['ID_lista'] . '">' . $valores['Nombre'] . '</option>';
+                                                                                            //por defecto se creará como libre
+                                                                                        }
+                                                                                        ?>
+                                                                                    </select>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNombreEmpleado">Lista de Servicios:</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
+                                                                                    </div>
+                                                                                    <select id="listaservicioV" class="form-control" name="listservicioV" id="listservicioV">
+                                                                                        <option value="0">Selecione un Servicio</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #4437ff;">
+                                                                            Frecuencia de Servicio</h4>
+
+                                                                        <div class="form-row">
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNombreEmpleado">Rango Periodo:</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
+                                                                                    </div>
+                                                                                    <select class="form-control" name="RangoP" id="RangoP">
+                                                                                        <option>Días</option>
+                                                                                        <option>Meses</option>
+                                                                                        <option>Años</option>
+                                                                                        <option>Trimestre</option>
+                                                                                        <option>Semestre</option>
+                                                                                        <option>Anual</option>
+                                                                                    </select>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNombreEmpleado">Periodo:</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
+                                                                                    </div>
+                                                                                    <input type="number" class="form-control" name="Periodo" id="Periodo">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-row">
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNombreEmpleado">Fecha Inicial:</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
+                                                                                    </div>
+                                                                                    <input type="date" class="form-control" name="Fincial" id="Finicial">
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="inputNombreEmpleado">Observaciones:</label>
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
+                                                                                    </div>
+                                                                                    <input type="text" class="form-control" name="Observ" id="Observ" placeholder="Alguna Observación...">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <button class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
+                                                                        <button class="btn btn-primary" onclick="stepper1.next()">Next</button>
+                                                                    </div>
+
+                                                                    <div id="test-l-3" role="tabpanel" class="bs-stepper-pane text-center" aria-labelledby="stepper1trigger3">
+
+                                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #6B90F3;">
+                                                                            Dellate de Equipos Sujetos al presente Contrato de Mantención</h4>
+
+                                                                        <div class="form-row">
+                                                                            <div class="card-body">
+                                                                                <table id="example2" class="table table-bordered table-hover table-responsive">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Nombre</th>
+                                                                                            <th>Código</th>
+                                                                                            <th>Descripcion</th>
+                                                                                            <th>Categoria</th>
+                                                                                            <th>Cantidad</th>
+                                                                                            <th>Acciones</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <?php
+                                                                                        $sql = "SELECT * FROM materialoproducto";
+                                                                                        //ver como mostrar el nombre en vez del cargo
+
+                                                                                        $resultado = mysqli_query($conn, $sql);
+                                                                                        while ($filas = mysqli_fetch_array($resultado)) {
+                                                                                            $var = $filas['SubCategoria_id'];
+                                                                                            $sql2 = "SELECT * FROM subcategoria where id_subcategoria =$var";
+                                                                                            $resultado2 = mysqli_query($conn, $sql2);
+                                                                                            $nombrecomu = mysqli_fetch_array($resultado2);
+                                                                                            $var2 = $filas['Categoria_id'];
+                                                                                            $sql3 = "SELECT * FROM categoria where id_Categoria='$var2'";
+                                                                                            $resultado3 = mysqli_query($conn, $sql3);
+                                                                                            $datosEmpleado = mysqli_fetch_array($resultado3);
+                                                                                        ?>
+                                                                                            <tr>
+                                                                                                <td><?php echo $filas['Nombre'] ?></td>
+                                                                                                <td><?php echo $filas['CodigoMP'] ?></td>
+                                                                                                <td><?php echo $filas['Descripcion'] ?></td>
+                                                                                                <td><?php echo $datosEmpleado['Nombre'] ?></td>
+                                                                                                <td><?php echo $filas['Cantidad'] ?></td>
+                                                                                                <td>
+                                                                                                    <div class="input-group-prepend">
+                                                                                                        <input type="number" class="form-control" name="CantidadC[]" id="CantidadC[]" placeholder="1,2.">
+                                                                                            </tr>
+                                                                                        <?php
+                                                                                        }
+                                                                                        ?>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <button class="btn btn-primary mt-5" onclick="stepper1.previous()">Anterior</button>
+                                                                        <button type="submit" id="enviar" class="btn btn-primary mt-5">Registrar</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
                                                         </div>
-                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
-                                                            Contrato de servicio</h4>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreCliente">Cliente:</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <select class="form-control" name="cliente" id="cliente" oninput="this.className = ''">
-                                                                        <?php
-                                                                        $sql = ("SELECT * FROM cliente");
-                                                                        $query = $conn->query($sql);
-                                                                        while ($valores = mysqli_fetch_array($query)) {
-                                                                            echo '<option value="' . $valores['Rut'] . '">' . $valores['Nombre'] . '</option>';
-                                                                        }
-                                                                        ?>
-                                                                    </select>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputEmail">Fecha de inicio</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-calendar-alt"></i>
-                                                                    </div>
-                                                                    <input type="date" class="form-control" name="Finicio" id="Finicio" oninput="this.className = ''">
-                                                                </div>
-
-                                                            </div>
-
-
-                                                        </div>
-                                                        <div class=" form-row">
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Tipo de contrato</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-newspaper"></i>
-                                                                    </div>
-                                                                    <select class="form-control" name="tcontrato" id="tcontrato" oninput="this.className = ''">
-                                                                        <?php
-                                                                        $sql = ("SELECT * FROM tipocontrato");
-                                                                        $query = $conn->query($sql);
-                                                                        while ($valores = mysqli_fetch_array($query)) {
-                                                                            echo '<option value="' . $valores['id_tipoContrato'] . '">' . $valores['Tipo'] . '</option>';
-                                                                        }
-                                                                        ?>
-
-                                                                    </select>
-                                                                </div>
-
-                                                            </div>
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputEmail">Email</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-envelope"></i>
-                                                                    </div>
-                                                                    <input type="email" class="form-control" name="Email" id="Email" placeholder="contacto@dominio.com" oninput="this.className = ''">
-                                                                </div>
-
-                                                            </div>
-
-
-                                                        </div>
-                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #4437ff;">
-                                                            Características del cliente</h4>
-
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Tipo de instalación</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
-                                                                    </div>
-                                                                    <select class="form-control" name="tinstalacion" id="tinstalacion" oninput="this.className = ''">
-                                                                        <?php
-                                                                        $sql = ("SELECT * FROM tipoinstalacion");
-                                                                        $query = $conn->query($sql);
-                                                                        while ($valores = mysqli_fetch_array($query)) {
-                                                                            echo '<option value="' . $valores['id_tipoIns'] . '">' . $valores['Tipo'] . '</option>';
-                                                                            //por defecto se creará como libre
-                                                                        }
-                                                                        ?>
-
-                                                                    </select>
-                                                                </div>
-
-                                                            </div>
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Nombre de instalación</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" oninput="this.className = ''" name="NameInst" id="NameInst" placeholder="Edificio el bosque...">
-                                                                </div>
-
-                                                            </div>
-
-
-
-                                                        </div>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Dirección</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" oninput="this.className = ''" name="address" id="address" placeholder="Edificio el bosque...">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputCiudad">Comuna</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
-                                                                    </div>
-                                                                    <select class="form-control" name="comuna" id="comuna" oninput="this.className = ''">
-                                                                        <?php
-                                                                        $sql = ("SELECT * FROM comuna");
-                                                                        $query = $conn->query($sql);
-                                                                        while ($valores = mysqli_fetch_array($query)) {
-                                                                            echo '<option value="' . $valores['id_comuna'] . '">' . $valores['Nombre_comuna'] . '</option>';
-                                                                            //por defecto se creará como libre
-                                                                        }
-                                                                        ?>
-
-                                                                    </select>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNarea">Área del contrato</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <input type="text" oninput="this.className = ''" class="form-control" name="NameInst" id="NameInst" placeholder="Edificio el bosque...">
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputCantArea">Cantidad</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-list-ol"></i>
-                                                                    </div>
-                                                                    <input type="number" class="form-control" name="cantidad" id="cantidad" oninput="this.className = ''">
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6" style="margin-left:40%;">
-                                                                <label for="inputCantArea">Agregar más áreas</label>
-                                                                <div class="input-group-prepend">
-
-                                                                    <button type="button" class="btn btn-success" oninput="this.className = ''">+</button>
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-                                                        <!-- Agregar abajo del + un cuadro informativo de presupuesto -->
-
+                                                    </div>
                                                 </div>
-                                                <div class="steps" style="text-align:center;margin-left:5%;">
-                                                    <span class="step"></span>
-                                                    <span class="step"></span>
-                                                    <span class="step"></span>
-                                                    <span class="step"></span>
-                                                </div>
-                                                <div class="modal-footer">
 
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                    <button type="submit" class="btn btn-primary">Agregar</button>
-                                                </div>
+
+
                                             </div>
-
-                                            </form>
 
 
                                         </div>
 
+                                        </form>
+
+
                                     </div>
+
                                 </div>
-
-
                             </div>
+
 
                         </div>
-                        <!-- /.card-header -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Información Empleado</h3>
-                            </div>
-                            <div class="card-body">
-                                <table id="example2" class="table table-bordered table-hover">
-                                    <thead>
+
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Información Empleado</h3>
+                        </div>
+                        <div class="card-body">
+                            <table id="example2" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Rut</th>
+                                        <th>Email</th>
+                                        <th>Teléfono</th>
+                                        <th>Cargo</th>
+                                        <th>Cuadrilla</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $sql = "SELECT * FROM empleado where id_cargo IN (Select id_cargo  FROM tipocargo )";
+                                    //ver como mostrar el nombre en vez del cargo
+
+                                    $resultado = mysqli_query($conn, $sql);
+                                    while ($filas = mysqli_fetch_array($resultado)) {
+                                        $var = $filas['id_cargo'];
+                                        $sql2 = "SELECT * FROM tipocargo where id_cargo=$var";
+                                        $resultado2 = mysqli_query($conn, $sql2);
+                                        $id_Cod = mysqli_fetch_array($resultado2);
+                                        $var2 = $filas['id_cuadrilla'];
+                                        $sql3 = "SELECT * FROM cuadrilla where id_personal=$var2";
+                                        $resultado3 = mysqli_query($conn, $sql3);
+                                        $id_cuadrilla = mysqli_fetch_array($resultado3);
+
+                                    ?>
                                         <tr>
-                                            <th>Nombre</th>
-                                            <th>Rut</th>
-                                            <th>Email</th>
-                                            <th>Teléfono</th>
-                                            <th>Cargo</th>
-                                            <th>Cuadrilla</th>
-                                            <th>Acciones</th>
+                                            <td><?php echo $filas['Nombre'] ?></td>
+                                            <td><?php echo $filas['Rut_Empleado'] ?></td>
+                                            <td><?php echo $filas['Email'] ?></td>
+                                            <td><?php echo $filas['Telefono'] ?></td>
+
+                                            <td><?php
+
+                                                echo $id_Cod['Nombre_Cargo'] ?></td>
+                                            <td><?php echo $id_cuadrilla['Alias'] ?></td>
+
+                                            <td>
+                                                <a href="../../CRUD/DELETE_Empleado.php?id=<?php echo $filas['Rut_Empleado'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
+                                                <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#crud<?php echo $filas['Rut_Empleado']; ?>"><i class="fas fa-edit"></i></button>
+
+                                            </td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        $sql = "SELECT * FROM empleado where id_cargo IN (Select id_cargo  FROM tipocargo )";
-                                        //ver como mostrar el nombre en vez del cargo
-
-                                        $resultado = mysqli_query($conn, $sql);
-                                        while ($filas = mysqli_fetch_array($resultado)) {
-                                            $var = $filas['id_cargo'];
-                                            $sql2 = "SELECT * FROM tipocargo where id_cargo=$var";
-                                            $resultado2 = mysqli_query($conn, $sql2);
-                                            $id_Cod = mysqli_fetch_array($resultado2);
-                                            $var2 = $filas['id_cuadrilla'];
-                                            $sql3 = "SELECT * FROM cuadrilla where id_personal=$var2";
-                                            $resultado3 = mysqli_query($conn, $sql3);
-                                            $id_cuadrilla = mysqli_fetch_array($resultado3);
-
-                                        ?>
-                                            <tr>
-                                                <td><?php echo $filas['Nombre'] ?></td>
-                                                <td><?php echo $filas['Rut_Empleado'] ?></td>
-                                                <td><?php echo $filas['Email'] ?></td>
-                                                <td><?php echo $filas['Telefono'] ?></td>
-
-                                                <td><?php
-
-                                                    echo $id_Cod['Nombre_Cargo'] ?></td>
-                                                <td><?php echo $id_cuadrilla['Alias'] ?></td>
-
-                                                <td>
-                                                    <a href="../../CRUD/DELETE_Empleado.php?id=<?php echo $filas['Rut_Empleado'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
-                                                    <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#crud<?php echo $filas['Rut_Empleado']; ?>"><i class="fas fa-edit"></i></button>
-
-                                                </td>
-                                            </tr>
-                                        <?php
-                                            include 'EditarEmpleado.php';
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
+                                    <?php
+                                        include 'EditarEmpleado.php';
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
 
 
-                            </div>
                         </div>
-
-                        <br>
-
-
-
-                        <!-- /.card-body -->
                     </div>
 
+                    <br>
 
+
+
+                    <!-- /.card-body -->
                 </div>
 
 
-
-
-
-
-
             </div>
-            <!-- /.row -->
+
+
+
+
+
+
+
         </div>
-        <!-- /.container-fluid -->
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
     </div>
     <!-- /.content -->
     </div>
@@ -839,7 +1083,9 @@ include('../../Conexion/conexion.php');
 
     <!-- OPTIONAL SCRIPTS -->
     <script src="../../recursos/plugins/chart.js/Chart.min.js"></script>
-
+    <script src="../../recursos/js/jquery-latest.min.js"></script>
+    <script src="bs-stepper.min.js"></script>
+    <script src="ShowInput.js"></script>
     <!-- DataTables  & Plugins -->
 
     <script src="../../recursos/plugins/jszip/jszip.min.js"></script>
@@ -891,58 +1137,18 @@ include('../../Conexion/conexion.php');
         });
     </script>
     <script>
-        var currentTab = 0; // Current tab is set to be the first tab (0)
-        showTab(currentTab); // Display the current tab
+        var stepper1Node = document.querySelector('#stepper1')
+        var stepper1 = new Stepper(document.querySelector('#stepper1'))
 
-        function showTab(n) {
-            // This function will display the specified tab of the form...
-            var x = document.getElementsByClassName("tab");
-            x[n].style.display = "block";
-            //... and fix the Previous/Next buttons:
-            if (n == 0) {
-                document.getElementById("prevBtn").style.display = "none";
-            } else {
-                document.getElementById("prevBtn").style.display = "inline";
-            }
-            if (n == (x.length - 1)) {
-                document.getElementById("nextBtn").innerHTML = "Submit";
-            } else {
-                document.getElementById("nextBtn").innerHTML = "Next";
-            }
-            //... and run a function that will display the correct step indicator:
-            fixStepIndicator(n)
-        }
-
-        function nextPrev(n) {
-            // This function will figure out which tab to display
-            var x = document.getElementsByClassName("tab");
-            // Exit the function if any field in the current tab is invalid:
-            if (n == 1 && !validateForm()) return false;
-            // Hide the current tab:
-            x[currentTab].style.display = "none";
-            // Increase or decrease the current tab by 1:
-            currentTab = currentTab + n;
-            // if you have reached the end of the form...
-            if (currentTab >= x.length) {
-                // ... the form gets submitted:
-                document.getElementById("regForm").submit();
-                return false;
-            }
-            // Otherwise, display the correct tab:
-            showTab(currentTab);
-        }
-
-
-
-        function fixStepIndicator(n) {
-            // This function removes the "active" class of all steps...
-            var i, x = document.getElementsByClassName("step");
-            for (i = 0; i < x.length; i++) {
-                x[i].className = x[i].className.replace(" active", "");
-            }
-            //... and adds the "active" class on the current step:
-            x[n].className += " active";
-        }
+        stepper1Node.addEventListener('show.bs-stepper', function(event) {
+            console.warn('show.bs-stepper', event)
+        })
+        stepper1Node.addEventListener('shown.bs-stepper', function(event) {
+            console.warn('shown.bs-stepper', event)
+        })
+        $("#enviar").click(function(e) {
+            document.getElementById("formulario").submit();
+        })
     </script>
 </body>
 

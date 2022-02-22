@@ -1,39 +1,38 @@
 <?php
 include('../Conexion/conexion.php');
-$Cliente = $_POST['Cliente'];
-$FechaContrato = $_POST['FechaContrato'];
-$TipoContrato = $_POST['TipoContrato'];
-$Tipo_de_instalacion = $_POST['Tipo_de_instalacion'];
-$RangoPeriodo = $_POST['RangoPeriodo'];
+
+$folio = $_POST['folio'];
+$Femision = $_POST['Femision'];
+$cliente = $_POST['cliente'];
+$Finicio = $_POST['Finicio'];
+$tcontrato = $_POST['tcontrato'];
+$Email = $_POST['Email'];
+$tinstalacion = $_POST['tinstalacion'];
+$NameInst = $_POST['NameInst'];
+//falta los Tipoarea[] y Cant[]
+$listservicio = $_POST['listservicio'];
+$listservicioV = $_POST['listservicioV'];
+$RangoP = $_POST['RangoP'];
 $Periodo = $_POST['Periodo'];
-$AreasContratadas = $_POST['AreasContratadas'];
-$CantidadEmpleados = $_POST['CantidadEmpleados'];
-$AreasContratadas2 = $_POST['AreasContratadas2'];
-$CantidadEmpleados2 = $_POST['CantidadEmpleados2'];
-$AreasContratadas3 = $_POST['AreasContratadas3'];
-$CantidadEmpleados3 = $_POST['CantidadEmpleados3'];
-$listaservicio = $_POST['listaservicio'];
-$proyecto = $_POST['proyecto'];
-$listaservicio2 = $_POST['listaservicio2'];
-$listaservicio3 = $_POST['listaservicio3'];
-$Piping = $_POST['Piping'];
-$ObservacionesSer = $_POST['ObservacionesSer'];
-$FechaInicial2 = $_POST['FechaInicial2'];
-$RangoPeriodo2 = $_POST['RangoPeriodo2'];
-$Periodo2 = $_POST['Periodo2'];
+$Fincial = $_POST['Fincial'];
+$Observ = $_POST['Observ'];
+$tparea = $_POST['Tipoarea'];
+$cantidad = $_POST['Cant'];
 
-if (!empty($AreasContratadas)) {
-    $insertar = "INSERT INTO contrato(Fecha_contrato,
-    id_tipocontrato,id_tipoinstalacion ,id_cliente ,id_ListaServicio,id_proyecto,id_area,cantidad_empleados,Rango_periodo,periodo) 
-    VALUES ( '$FechaContrato','$TipoContrato','$Tipo_de_instalacion','$Cliente'
-    ,'$listaservicio','$proyecto','$AreasContratadas','$CantidadEmpleados','$RangoPeriodo','$Periodo')";
+if ($tparea) {
+    for ($i = 0; $i < count($tparea); $i++) {
 
-    $resultado = mysqli_query($conn, $insertar);
+
+        $sql = "INSERT INTO contrato (folio,Femision,id_cliente ,Finicio,tcontrato,Email,tinstalacion,NameInst,tipoarea,listservicio ,listservicioV,RangoP,Periodo,
+        Fincial, observacion) VALUES ('$folio','$Femision','$cliente','$Finicio','$tcontrato','$Email','$tinstalacion',
+                '$NameInst','$tparea[$i]','$listservicio','$cantidad[$i]',
+                '$RangoP','$Periodo','$Fincial','$Observ')";
+        $resultado = mysqli_query($conn, $sql);
+    }
 }
-
 
 if ($resultado) {
     echo "<script>alert('Registrado con éxito')</script>";
-    header('Location:../Apartados/Cliente/FichaCliente.php');
+    header('Location:../Apartados/Cliente/Contrato.php');
     die;
 }
