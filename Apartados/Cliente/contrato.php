@@ -469,7 +469,7 @@ include('../../Conexion/conexion.php');
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Sección Ficha Empleados</h1>
+                            <h1 class="m-0">Sección Cuadro de mando</h1>
                         </div>
                         <!-- /.col -->
 
@@ -974,57 +974,56 @@ include('../../Conexion/conexion.php');
                     <!-- /.card-header -->
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Información Empleado</h3>
+                            <h3 class="card-title">Información Contrato de servicios</h3>
                         </div>
+
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
+                            <table id="example1" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Nombre</th>
-                                        <th>Rut</th>
-                                        <th>Email</th>
-                                        <th>Teléfono</th>
-                                        <th>Cargo</th>
-                                        <th>Cuadrilla</th>
+                                        <th>Folio</th>
+                                        <th>Cliente</th>
+                                        <th>Fecha de inicio del contrato</th>
+                                        <th>Área</th>
+                                        <th>Cantidad de Personal</th>
+                                        <th>Fecha Inicio de obra</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $sql = "SELECT * FROM empleado where id_cargo IN (Select id_cargo  FROM tipocargo )";
+                                    $sql = "SELECT * FROM contrato ";
                                     //ver como mostrar el nombre en vez del cargo
 
                                     $resultado = mysqli_query($conn, $sql);
                                     while ($filas = mysqli_fetch_array($resultado)) {
-                                        $var = $filas['id_cargo'];
-                                        $sql2 = "SELECT * FROM tipocargo where id_cargo=$var";
+                                        $var = $filas['id_cliente'];
+                                        $sql2 = "SELECT * FROM cliente where Rut=$var";
                                         $resultado2 = mysqli_query($conn, $sql2);
                                         $id_Cod = mysqli_fetch_array($resultado2);
-                                        $var2 = $filas['id_cuadrilla'];
-                                        $sql3 = "SELECT * FROM cuadrilla where id_personal=$var2";
+                                        $var2 = $filas['tipoarea'];
+                                        $sql3 = "SELECT * FROM tipoarea where id_area=$var2";
                                         $resultado3 = mysqli_query($conn, $sql3);
-                                        $id_cuadrilla = mysqli_fetch_array($resultado3);
+                                        $nombrearea = mysqli_fetch_array($resultado3);
 
                                     ?>
                                         <tr>
-                                            <td><?php echo $filas['Nombre'] ?></td>
-                                            <td><?php echo $filas['Rut_Empleado'] ?></td>
-                                            <td><?php echo $filas['Email'] ?></td>
-                                            <td><?php echo $filas['Telefono'] ?></td>
+                                            <td><?php echo $filas['Folio'] ?></td>
+                                            <td><?php echo $id_Cod['Nombre'] ?></td>
+                                            <td><?php echo $filas['Finicio'] ?></td>
+                                            <td><?php echo $nombrearea['NombreArea'] ?></td>
+                                            <td><?php echo $filas['CantidadPersonal'] ?></td>
+                                            <td><?php echo $filas['Fincial'] ?></td>
 
-                                            <td><?php
-
-                                                echo $id_Cod['Nombre_Cargo'] ?></td>
-                                            <td><?php echo $id_cuadrilla['Alias'] ?></td>
 
                                             <td>
-                                                <a href="../../CRUD/DELETE_Empleado.php?id=<?php echo $filas['Rut_Empleado'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
-                                                <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#crud<?php echo $filas['Rut_Empleado']; ?>"><i class="fas fa-edit"></i></button>
+                                                <a href="../../CRUD/DELETE_contrato.php?id=<?php echo $filas['id_contrato'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
+                                                <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#crud<?php echo $filas['id_contrato']; ?>"><i class="fas fa-edit"></i></button>
 
                                             </td>
                                         </tr>
                                     <?php
-                                        include 'EditarEmpleado.php';
+                                        include 'EditarContrato.php';
                                     }
                                     ?>
                                 </tbody>
@@ -1103,15 +1102,6 @@ include('../../Conexion/conexion.php');
                 "autoWidth": false,
             });
             $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": true,
-                "searching": true,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-            });
-            $('#example3').DataTable({
                 "paging": true,
                 "lengthChange": true,
                 "searching": true,
