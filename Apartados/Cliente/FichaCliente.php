@@ -645,12 +645,12 @@ include('../../Conexion/conexion.php');
                             </div>
 
                             <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #1eff56;">
-                              Datos de Crédito y cobranza</h4>
+                              Datos de Crédito y Cobranza</h4>
 
                             <div class="form-row">
 
                               <div class="form-group col-md-4">
-                                <label for="inputPlazoPago">PlazodePago</label>
+                                <label for="inputPlazoPago">Plazo de Pago</label>
                                 <div class="input-group-prepend">
                                   <div class="input-group-text"><i class="fas fa-building"></i>
                                   </div>
@@ -688,16 +688,7 @@ include('../../Conexion/conexion.php');
                                   <div class="input-group-text"><i class="fas fa-building"></i>
                                   </div>
 
-                                  <select class="form-control" name="DirecPago" id="DirecPago">
-                                    <?php
-                                    $sql = ("SELECT * FROM banco");
-                                    $query = $conn->query($sql);
-                                    while ($valores = mysqli_fetch_array($query)) {
-                                      echo '<option value="' . $valores['id_banco'] . '">' . $valores['Nombre_Banco'] . '</option>';
-                                    }
-                                    ?>
-
-                                  </select>
+                                  <input type="text" class="form-control" name="DirecPago" placeholder="Ingrese la dirección del pago">
                                 </div>
 
                               </div>

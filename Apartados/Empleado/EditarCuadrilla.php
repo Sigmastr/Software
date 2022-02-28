@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header" style="background-color:#3f668d">
-                <h5 class="modal-title" style="color:white" id="exampleModalLabel">Edición Empleado</h5>
+                <h5 class="modal-title" style="color:white" id="exampleModalLabel">Configuración Cuadrilla</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -10,38 +10,38 @@
             <div class="modal-body">
 
 
-                <form method="POST" action="../../CRUD/UPDATE_tipocuadrilla.php">
+                <form method="POST" action="../../PhP/EDITAR_cuadrilla.php" id="cargo">
                     <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
-                        Datos de cupos de la cuadrilla</h4>
+                        Datos de la creación de cuadrilla</h4>
                     <div class="form-row">
-                        <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $filas['id_personal'] ?>">
                         <div class="form-group col-md-6">
-                            <label for="inputNombreEmpleado">Tipo de cuadrilla</label>
+                            <label for="inputAlias">Alias de la cuadrilla:</label>
                             <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="fas fa-user"></i>
+                                <div class="input-group-text"><i class="fas fa-id-card"></i>
                                 </div>
-                                <input type="text" class="form-control" name="TipoCuadrilla" id="TipoCuadrilla" placeholder="Solitario/duo" value="<?php echo $filas['Tipo_cuadrilla'] ?>">
+                                <input type="text" class="form-control" name="AliasCua" id="AliasCua" placeholder="Electricista, mecánicos, etc" value="<?php echo $filas['Alias'] ?>">
                             </div>
 
                         </div>
-                        <div class=" form-group col-md-6">
-                            <label for="inputNombreEmpleado">Nombre del grupo de trabajo:</label>
+
+                        <div class="form-group col-md-6">
+                            <label for="inputTipo">Tipo de cuadrilla:</label>
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-user"></i>
                                 </div>
-                                <input type="text" class="form-control" name="Alias" id="Alias" placeholder="Grupo 1, Electricistas" value="<?php echo $filas['Alias'] ?>">
+                                <input type="text" class="form-control" name="Tcuadrilla" id="Tcuadrilla" placeholder="Solitario/Dúo" value="<?php echo $filas['Tipo_cuadrilla'] ?>">
                             </div>
 
                         </div>
-                        <!-- Estado de cuadrilla creado por defecto como desocupado -->
+
 
                     </div>
 
 
             </div>
-            <div class="modal-footer">
+            <div class=" modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="submit" class="btn btn-primary" onClick='return enviarFormulario();'>Agregar</button>
             </div>
             </form>
 

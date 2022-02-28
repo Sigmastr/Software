@@ -91,7 +91,7 @@ include('../../Conexion/conexion.php');
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="https://www.segproject.cl" class="brand-link">
                 <img src="../../recursos/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8" />
                 <span class="brand-text font-weight-light">SegProject</span>
             </a>
@@ -113,7 +113,7 @@ include('../../Conexion/conexion.php');
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item">
-                            <a href="../MenuAdministrador/administrador.php" class="nav-link active">
+                            <a href="../MenuAdministrador/administrador.php" class="nav-link ">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> ícono descriptivo -->
                                 <p>
                                     Administrador
@@ -128,7 +128,7 @@ include('../../Conexion/conexion.php');
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link active">
+                                    <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Configuración</p>
                                     </a>
@@ -399,7 +399,7 @@ include('../../Conexion/conexion.php');
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link ">
+                            <a href="#" class="nav-link active">
                                 <!-- <i class="nav-icon fas fa-table"></i> -->
                                 <p>
                                     Cliente
@@ -423,7 +423,7 @@ include('../../Conexion/conexion.php');
                                 </li>
                                 <!-- <li class="nav-header">Servicio Tecnico</li> -->
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="#" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Cuadro de Mando
                                         </p>
@@ -804,7 +804,7 @@ include('../../Conexion/conexion.php');
 
                                                                         <div class="form-row">
                                                                             <div class="form-group col-md-6">
-                                                                                <label for="inputNombreEmpleado">Tipo de Servicio:</label>
+                                                                                <label for="inputTipoServicio">Tipo de Servicio:</label>
                                                                                 <div class="input-group-prepend">
                                                                                     <div class="input-group-text"><i class="fas fa-building"></i>
                                                                                     </div>
@@ -826,7 +826,7 @@ include('../../Conexion/conexion.php');
                                                                             </div>
 
                                                                             <div class="form-group col-md-6">
-                                                                                <label for="inputNombreEmpleado">Lista de Servicios:</label>
+                                                                                <label for="inputListaServicio">Lista de Servicios:</label>
                                                                                 <div class="input-group-prepend">
                                                                                     <div class="input-group-text"><i class="fas fa-building"></i>
                                                                                     </div>
@@ -887,8 +887,8 @@ include('../../Conexion/conexion.php');
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <button class="btn btn-primary" onclick="stepper1.previous()">Previous</button>
-                                                                        <button class="btn btn-primary" onclick="stepper1.next()">Next</button>
+                                                                        <button class="btn btn-primary" onclick="stepper1.previous()">Anterior</button>
+                                                                        <button class="btn btn-primary" onclick="stepper1.next()">Siguiente</button>
                                                                     </div>
 
                                                                     <div id="test-l-3" role="tabpanel" class="bs-stepper-pane text-center" aria-labelledby="stepper1trigger3">

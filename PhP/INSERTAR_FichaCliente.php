@@ -24,7 +24,7 @@ $TipoCliente = $_POST["TipoCliente"];
 $contrato = $_POST["contrato"];
 
 $insertar = "INSERT INTO cliente(Rut,Nombre,Email,Telefono,Actividad,Pais,Region,Ciudad,Direccion,
-PlazoPago,EstadoClienteSistema ,CorreoPago,FonoPago,Banco,Linea_Credito,
+PlazoPago,EstadoClienteSistema ,CorreoPago,FonoPago,direccionPago,Linea_Credito,
 Representante,Id_TipoCliente ,Id_TipoContrato) VALUES ('$RutCliente','$NombreCliente','$CorreoCliente','$telefono','$Actividad','$pais',
 '$region','$ciudad','$direccion','$PPago','$EstadoCliente','$CorreoPago','$TelefonoCobranza','$DirecPago','$LineCredit','$NombreRepresentante',
 '$TipoCliente','$contrato')";

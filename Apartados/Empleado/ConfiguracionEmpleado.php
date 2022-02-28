@@ -119,17 +119,36 @@ include('../../Conexion/conexion.php');
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link active">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Configuración</p>
+                                    <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link">
+                                        <!-- <i class="nav-icon fas fa-circle"></i> -->
+                                        <p>
+                                            Configuración
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
                                     </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link active">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Empleados</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Cuadrilla</p>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Cargos</p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="../Maestro/Maestro.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Maestros</p>
-                                    </a>
-                                </li>
+
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -431,10 +450,6 @@ include('../../Conexion/conexion.php');
                         </li>
 
 
-
-
-
-
                     </ul>
                     </li>
 
@@ -460,7 +475,7 @@ include('../../Conexion/conexion.php');
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Sección Ficha Empleados</h1>
+                            <h1 class="m-0">Sección Empleados</h1>
                         </div>
                         <!-- /.col -->
 

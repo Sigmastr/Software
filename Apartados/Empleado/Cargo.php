@@ -8,7 +8,7 @@ include('../../Conexion/conexion.php');
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sección Ficha Proveedor</title>
+    <title>Sección Empleados</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
     <!-- Font Awesome Icons -->
@@ -104,7 +104,7 @@ include('../../Conexion/conexion.php');
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item">
-                            <a href="../MenuAdministrador/administrador.php" class="nav-link">
+                            <a href="../MenuAdministrador/administrador.php" class="nav-link active">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> ícono descriptivo -->
                                 <p>
                                     Administrador
@@ -120,20 +120,39 @@ include('../../Conexion/conexion.php');
                                 </li>
                                 <li class="nav-item">
                                     <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Configuración</p>
+                                        <!-- <i class="nav-icon fas fa-circle"></i> -->
+                                        <p>
+                                            Configuración
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
                                     </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="ConfiguracionEmpleado.php" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Empleados</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="./Cuadrilla.php" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Cuadrilla</p>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="Cargo.php" class="nav-link active">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Cargos</p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="../Maestro/Maestro.php" class=" nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Maestros</p>
-                                    </a>
-                                </li>
+
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link">
                                 <!-- <i class="nav-icon fas fa-chart-pie"></i> -->
                                 <p>
                                     Adquisiciones
@@ -142,7 +161,7 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="FichaProveedor.php" class="nav-link active">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ficha Proveedor</p>
                                     </a>
@@ -160,7 +179,7 @@ include('../../Conexion/conexion.php');
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../Adquisiciones/IngresarCompra.php" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ingresar Compra</p>
                                     </a>
@@ -385,48 +404,7 @@ include('../../Conexion/conexion.php');
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Presupuesto
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Cotización
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Conformación Servicio
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Reportes especificos
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Cuadros de mando Soporte Mantención
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Correos Informativos y Alertas
-                                        </p>
-                                    </a>
-                                </li>
+
                             </ul>
                         </li>
 
@@ -472,15 +450,18 @@ include('../../Conexion/conexion.php');
                         </li>
 
 
-
-
-
-
                     </ul>
                     </li>
 
 
-                    </ul>
+
+
+
+
+
+
+
+                    </ul> -->
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
@@ -494,17 +475,10 @@ include('../../Conexion/conexion.php');
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Sección Ficha Proveedor</h1>
+                            <h1 class="m-0">Configuración Cargo</h1>
                         </div>
                         <!-- /.col -->
-                        <div class="col-sm-6">
 
-
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="../MenuAdministrador/administrador.php">Inicio</a></li>
-
-                            </ol>
-                        </div>
                         <!-- /.col -->
 
                     </div>
@@ -529,16 +503,22 @@ include('../../Conexion/conexion.php');
                                 <div class="card-header">
                                     <!-- Aquí poner los botones -->
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#FichaCliente">
-                                        Ingresar Proveedor
-                                    </button>
+                                    <div class="botones" style="margin-bottom:1%; margin-top:1%">
+
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#CrearCargo">
+                                            Crear Cargo
+                                        </button>
+
+
+                                    </div>
 
                                     <!-- Modal -->
-                                    <div class="modal fade" id="FichaCliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                                    <div class="modal fade" id="CrearCargo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-lg" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header" style="background-color:#3f668d">
-                                                    <h5 class="modal-title" style="color:white" id="exampleModalLabel">Ficha Proveedor</h5>
+                                                    <h5 class="modal-title" style="color:white" id="exampleModalLabel">Ficha Cargo</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -546,301 +526,122 @@ include('../../Conexion/conexion.php');
                                                 <div class="modal-body">
 
 
-                                                    <form method="POST" action="../../PhP/INSERTAR_FichaProveedor.php">
+                                                    <form method="POST" action="../../PhP/INSERTAR_CARGO.php" id="cargo">
                                                         <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
-                                                            Datos del Proveedor</h4>
+                                                            Datos del Cargo</h4>
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
-                                                                <label for="inputNombreCliente">Nombre de la empresa</label>
+                                                                <label for="inputNombreEmpleado">Nombre del Cargo</label>
                                                                 <div class="input-group-prepend">
                                                                     <div class="input-group-text"><i class="fas fa-user"></i>
                                                                     </div>
-                                                                    <input type="text" class="form-control" name="nameProveedor" placeholder="Ingrese el nombre del proveedor/empresa">
+                                                                    <input type="text" class="form-control" name="NombreCargo" id="NombreCargo" placeholder="Ingrese nombre del cargo">
                                                                 </div>
 
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputRut">Rut</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-address-card"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="rutProveedor" placeholder="11111111-1">
-                                                                </div>
 
-                                                            </div>
 
                                                         </div>
-                                                        <div class="form-row">
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputTlf">Teléfono:</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-mobile"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="telefono" id="telefono" placeholder="911111111">
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputActividad">Actividad</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-briefcase"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="Actividad" id="Actividad" placeholder="Ingrese su actividad">
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-row">
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputPais">País</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
-                                                                    </div>
-                                                                    <select class="form-control" name="pais">
-                                                                        <?php
-                                                                        $sql = ("SELECT * FROM pais");
-                                                                        $query = $conn->query($sql);
-                                                                        while ($valores = mysqli_fetch_array($query)) {
-                                                                            echo '<option value="' . $valores['id-pais'] . '">' . $valores['Nombre'] . '</option>';
-                                                                        }
-                                                                        ?>
-                                                                    </select>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputRegion">Región</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
-                                                                    </div>
-                                                                    <select class="form-control" name="region" id="region">
-                                                                        <?php
-                                                                        $sql = ("SELECT * FROM region");
-                                                                        $query = $conn->query($sql);
-                                                                        while ($valores = mysqli_fetch_array($query)) {
-                                                                            echo '<option value="' . $valores['Id_Region'] . '">' . $valores['Nombre'] . '</option>';
-                                                                        }
-                                                                        ?>
-                                                                    </select>
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="form-row">
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputCiudad">Ciudad</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-house-user"></i>
-                                                                    </div>
-                                                                    <select class="form-control" name="ciudad" id="ciudad">
-                                                                        <!-- php aquí -->
-                                                                        <?php
-                                                                        $sql = ("SELECT * FROM ciudad");
-                                                                        $query = $conn->query($sql);
-                                                                        while ($valores = mysqli_fetch_array($query)) {
-                                                                            echo '<option value="' . $valores['id_ciudad'] . '">' . $valores['Nombre_ciudad'] . '</option>';
-                                                                        }
-                                                                        ?>
-                                                                    </select>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputDireccion">Dirección</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Ingrese la dirección">
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #1eff56;">
-                                                            Datos de Crédito y Cobranza</h4>
-
-                                                        <div class="form-row">
-
-                                                            <div class="form-group col-md-4">
-                                                                <label for="inputPlazoPago">Plazo de Pago</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="PPago" id="PPago" placeholder="Ingrese el plazo de pago en días">
-                                                                </div>
-
-                                                            </div>
-
-                                                            <div class="form-group col-md-4">
-                                                                <label for="inputEmail5">Correo Pago</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-envelope"></i>
-                                                                    </div>
-                                                                    <input type="email" class="form-control" name="CorreoPago" id="CorreoPago" placeholder="contacto@dominio.com">
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="form-group col-md-4">
-                                                                <label for="InpuntRepre">Representante</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="NombreRepresentante" id="NombreRepresentante" placeholder="ingrese nombre de Representante">
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="form-row">
-
-                                                            <div class="form-group col-md-4">
-
-                                                                <label for="inputDireccionPago">Número de cuenta:</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="nrocuenta" id="DirecPago" placeholder="Ingrese el numero de cuenta">
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="form-group col-md-4">
-                                                                <label for="inputLineaCredito">Línea de crédito</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-wallet"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="LineCredit" id="LineCredit" placeholder="Ingrese Línea de pago">
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="form-group col-md-4">
-
-                                                                <label for="inputDireccionPago">Dirección Pago</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
-                                                                    </div>
-
-                                                                    <select class="form-control" name="DirecPago" id="DirecPago">
-                                                                        <?php
-                                                                        $sql = ("SELECT * FROM banco");
-                                                                        $query = $conn->query($sql);
-                                                                        while ($valores = mysqli_fetch_array($query)) {
-                                                                            echo '<option value="' . $valores['id_banco'] . '">' . $valores['Nombre_Banco'] . '</option>';
-                                                                        }
-                                                                        ?>
-
-                                                                    </select>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-
-
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                            <button type="submit" class="btn btn-primary">Agregar</button>
-                                                        </div>
-                                                    </form>
 
 
                                                 </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                                    <button type="submit" class="btn btn-primary" onClick='return enviarFormulario();'>Agregar</button>
+                                                </div>
+                                                </form>
+
 
                                             </div>
+
                                         </div>
                                     </div>
 
                                 </div>
+
+                            </div>
+                            <!-- /.card-header -->
+
+
+                            <br>
+
+
+
+                            <!-- /.card-body -->
+                        </div>
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Información de Cargos</h3>
+                                </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
-                                    <table id="example2" class="table table-bordered table-hover">
+                                    <table id="example3" class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th>Nombre de la Empresa</th>
-                                                <th>Rut</th>
-                                                <th>Email</th>
-                                                <th>Teléfono</th>
-                                                <th>Región</th>
-                                                <th>Ciudad</th>
-                                                <th>Actividad</th>
-                                                <th>Ejecutivo</th>
-                                                <th>Número de cuenta</th>
+                                                <th>Nombre</th>
+
                                                 <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $sql = "SELECT * FROM proveedor";
+                                            $sql = "SELECT * FROM tipocargo";
+                                            //ver como mostrar el nombre en vez del cargo
+
                                             $resultado = mysqli_query($conn, $sql);
                                             while ($filas = mysqli_fetch_array($resultado)) {
-                                                $var = $filas['Region'];
-                                                $sql = "SELECT * FROM region where Id_Region=$var";
-                                                $query = mysqli_query($conn, $sql);
-                                                $fila = mysqli_fetch_array($query);
-                                                $var2 = $filas['Ciudad'];
-                                                $sql2 = "SELECT * FROM ciudad WHERE id_ciudad=$var2";
-                                                $query2 = mysqli_query($conn, $sql2);
-                                                $fila2 = mysqli_fetch_array($query2);
-                                                $var = $filas['Banco_Proveedor'];
-                                                $sql3 = "SELECT * FROM banco Where id_banco =$var";
-                                                $query3 = mysqli_query($conn, $sql3);
-                                                $fila3 = mysqli_fetch_array($query3);
+
+
                                             ?>
                                                 <tr>
-                                                    <td><?php echo $filas['Nombre_Empresa'] ?></td>
-                                                    <td><?php echo $filas['Rut'] ?></td>
-                                                    <td><?php echo $filas['correo'] ?></td>
-                                                    <td><?php echo $filas['telefono'] ?></td>
-                                                    <td><?php echo $fila['Nombre'] ?></td>
-                                                    <td><?php echo $fila2['Nombre_ciudad'] ?></td>
-                                                    <td><?php echo $filas['Actividad'] ?></td>
-                                                    <td><?php echo $filas['Representante'] ?></td>
-                                                    <td><?php echo $fila3['Nombre_Banco'] ?></td>
+                                                    <td><?php echo $filas['Nombre_Cargo'] ?></td>
                                                     <td>
-                                                        <a href="../../CRUD/DELETE_proveedor.php?id=<?php echo $filas['Rut'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
-                                                        <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#proveedor<?php echo $filas['Rut']; ?>"><i class="fas fa-edit"></i></button>
+                                                        <a href="../../CRUD/DELETE_tipocuadrilla.php?id=<?php echo $filas['id_cargo'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
+                                                        <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#crud<?php echo $filas['id_cargo']; ?>"><i class="fas fa-edit"></i></button>
+
                                                     </td>
                                                 </tr>
                                             <?php
-                                                include 'EDITAR_Proveedor.php';
+                                                include './CRUD/EditarCargo.php';
                                             }
-                                            mysqli_close($conn);
                                             ?>
                                         </tbody>
                                     </table>
                                 </div>
                                 <!-- /.card-body -->
                             </div>
+
                         </div>
 
-
-
-
-
                     </div>
-                    <!-- /.row -->
+
+
+
+
+
+
+
                 </div>
-                <!-- /.container-fluid -->
+                <!-- /.row -->
             </div>
-            <!-- /.content -->
+            <!-- /.container-fluid -->
         </div>
-        <!-- /.content-wrapper -->
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
 
 
 
-        <!-- Main Footer -->
-        <footer class="main-footer">
-            <strong>Propiedad de Mline 2021
-                <a href="https://mlineseg.wixsite.com/website">Mline</a>.</strong>
-            Todos los derechos reservados
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Versión</b> 1.0
-            </div>
-        </footer>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <strong>Propiedad de Mline 2021
+            <a href="https://mlineseg.wixsite.com/website">Mline</a>.</strong>
+        Todos los derechos reservados
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Versión</b> 1.0
+        </div>
+    </footer>
     </div>
     <!-- ./wrapper -->
 
@@ -864,6 +665,7 @@ include('../../Conexion/conexion.php');
     <script src="../../recursos/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="../../recursos/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="../../recursos/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <script>
         $(function() {
             $("#example1").DataTable({
@@ -871,6 +673,15 @@ include('../../Conexion/conexion.php');
                 "autoWidth": false,
             });
             $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+            $('#example3').DataTable({
                 "paging": true,
                 "lengthChange": true,
                 "searching": true,
