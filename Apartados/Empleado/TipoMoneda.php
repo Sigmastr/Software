@@ -8,7 +8,7 @@ include('../../Conexion/conexion.php');
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tipo de Servicio</title>
+    <title>Configuración</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
     <!-- Font Awesome Icons -->
@@ -113,27 +113,78 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                    <a href="../MenuAdministrador/administrador.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Inicio</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Configuración</p>
+                                    <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link active">
+                                        <!-- <i class="nav-icon fas fa-circle"></i> -->
+                                        <p>
+                                            Configuración
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
                                     </a>
+                                    <ul class="nav nav-treeview">
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Cuadrilla</p>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="Cargo.php" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Cargos</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="Especialidad.php" class="nav-link ">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Especialidad</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="./ConfiguracionEmpleado.php" class="nav-link ">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Empleados</p>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>
+                                                    Unidades/Monedas
+                                                    <i class="right fas fa-angle-left"></i>
+                                                </p>
+                                            </a>
+                                            <ul class="nav nav-treeview">
+                                                <li class="nav-item">
+                                                    <a href="./UnidadDeMedida.php" class="nav-link">
+                                                        <i class="far fa-dot-circle nav-icon"></i>
+                                                        <p>Unidad de medida</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link active">
+                                                        <i class="far fa-dot-circle nav-icon"></i>
+                                                        <p>Monedas</p>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="../Maestro/Maestro.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Maestros</p>
-                                    </a>
-                                </li>
+
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link ">
                                 <!-- <i class="nav-icon fas fa-chart-pie"></i> -->
                                 <p>
                                     Adquisiciones
@@ -142,7 +193,7 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="FichaProveedor.php" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ficha Proveedor</p>
                                     </a>
@@ -189,7 +240,7 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="../Bodega/Bodega.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ficha Bodega</p>
                                     </a>
@@ -243,14 +294,14 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/tables/data.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Estado ST - SM - SD - SP
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/data.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Conformación Servicio ST - SM - SD - SP
                                         </p>
@@ -258,63 +309,63 @@ include('../../Conexion/conexion.php');
                                 </li>
                                 <!-- <li class="nav-header">Servicio Tecnico</li> -->
                                 <li class="nav-item">
-                                    <a href="pages/tables/data.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Solicitud de ST
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Check List
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Actas de Cierre
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Guía de Servicio
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Informe Técnico
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Solicitud de Materiales
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Presupuesto
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Cotización
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Conformación Servicio
                                         </p>
@@ -322,21 +373,21 @@ include('../../Conexion/conexion.php');
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Reportes especificos
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Cuadros de mando Soporte Técnico
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Correos Informativos y Alertas
                                         </p>
@@ -344,84 +395,84 @@ include('../../Conexion/conexion.php');
                                 </li>
                                 <li class="nav-header">Servicio Mantención</li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Conformación Servicio
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Reportes especificos
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Check List
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Actas de Cierre
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Informe Técnico
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Solicitud de Materiales
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Presupuesto
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Cotización
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Conformación Servicio
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Reportes especificos
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Cuadros de mando Soporte Mantención
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Correos Informativos y Alertas
                                         </p>
@@ -431,7 +482,7 @@ include('../../Conexion/conexion.php');
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link ">
                                 <!-- <i class="nav-icon fas fa-table"></i> -->
                                 <p>
                                     Cliente
@@ -440,14 +491,14 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/tables/data.html nav-link active" class="nav-link active">
+                                    <a href="../Cliente/FichaCliente.php" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ficha Cliente
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/data.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Reportes especificos
                                         </p>
@@ -455,7 +506,7 @@ include('../../Conexion/conexion.php');
                                 </li>
                                 <!-- <li class="nav-header">Servicio Tecnico</li> -->
                                 <li class="nav-item">
-                                    <a href="pages/tables/data.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Cuadro de Mando
                                         </p>
@@ -480,14 +531,7 @@ include('../../Conexion/conexion.php');
                     </li>
 
 
-
-
-
-
-
-
-
-                    </ul> -->
+                    </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
@@ -501,7 +545,7 @@ include('../../Conexion/conexion.php');
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Sección Tipo de servicio</h1>
+                            <h1 class="m-0">Configuración de Moneda</h1>
                         </div>
                         <!-- /.col -->
 
@@ -530,21 +574,19 @@ include('../../Conexion/conexion.php');
                                     <!-- Aquí poner los botones -->
                                     <!-- Button trigger modal -->
                                     <div class="botones" style="margin-bottom:1%; margin-top:1%">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Tiposervicio">
-                                            Agregar Tipo de servicio
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Moneda">
+                                            Agregar Tipo de moneda
                                         </button>
 
 
                                     </div>
 
                                     <!-- Modal -->
-
-
-                                    <div class="modal fade" id="Tiposervicio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="Moneda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-lg" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header" style="background-color:#3f668d">
-                                                    <h5 class="modal-title" style="color:white" id="exampleModalLabel">Agregar Bodega</h5>
+                                                    <h5 class="modal-title" style="color:white" id="exampleModalLabel">Agregar tipo de moneda</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -552,26 +594,20 @@ include('../../Conexion/conexion.php');
                                                 <div class="modal-body">
 
 
-                                                    <form method="POST" action="../../PhP/INSERTAR_TipoService.php">
+                                                    <form method="POST" action="../../PhP/INSERTAR_moneda.php">
                                                         <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
-                                                            Datos de Bodega</h4>
+                                                            Ingrese la divisa</h4>
                                                         <div class="form-row">
-
                                                             <div class="form-group col-md-6">
-                                                                <label for="inputTipo">Tipo de servicio</label>
+                                                                <label for="inputNombreEmpleado">Divisa:</label>
                                                                 <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-building"></i>
+                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
                                                                     </div>
-                                                                    <input type="text" class="form-control" name="tipo" id="tipo" placeholder="Bodega, mall, edificio, etc">
+                                                                    <input type="text" class="form-control" name="moneda" placeholder="Euro, Peso Chileno, Peso Argentino, Dolar, etc">
                                                                 </div>
 
                                                             </div>
-
-
                                                         </div>
-
-
-
 
                                                 </div>
                                                 <div class="modal-footer">
@@ -585,51 +621,60 @@ include('../../Conexion/conexion.php');
 
                                         </div>
                                     </div>
+
+
                                 </div>
 
                             </div>
                             <!-- /.card-header -->
-                            <div class="card-body">
-                                <table id="example2" class="table table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-
-                                            <th>Tipo</th>
-
-
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        $sql = "SELECT * FROM tipoinstalacion";
-                                        //ver como mostrar el nombre en vez del cargo
-
-                                        $resultado = mysqli_query($conn, $sql);
-                                        while ($filas = mysqli_fetch_array($resultado)) {
-
-                                        ?>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Información de Tipos de monedas</h3>
+                                </div>
+                                <div class="card-body">
+                                    <table id="example2" class="table table-bordered table-hover">
+                                        <thead>
                                             <tr>
-
-                                                <td><?php echo $filas['Tipo'] ?></td>
-
-                                                <!-- Consulta para tener el telefono del empleado y el nombre de la comuna -->
-
-                                                <td>
-                                                    <a href="../../CRUD/DELETE_TipoServicio.php?id=<?php echo $filas['id_tipoIns'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
-                                                    <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#update_service<?php echo $filas['id_tipoIns']; ?>"><i class="fas fa-edit"></i></button>
-                                                </td>
+                                                <th>Nombre</th>
+                                                <th>Acciones</th>
                                             </tr>
-                                        <?php
-                                            include 'editService.php';
-                                        }
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $sql = "SELECT * FROM moneda ";
+                                            //ver como mostrar el nombre en vez del cargo
 
-                                        ?>
-                                    </tbody>
-                                </table>
+                                            $resultado = mysqli_query($conn, $sql);
+                                            while ($filas = mysqli_fetch_array($resultado)) {
+
+                                            ?>
+                                                <tr>
+                                                    <td><?php echo $filas['Nombre'] ?></td>
+                                                    <td>
+                                                        <a href="../../CRUD/Delete_moneda.php?id=<?php echo $filas['ID_moneda'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
+                                                        <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#crud<?php echo $filas['ID_moneda']; ?>"><i class="fas fa-edit"></i></button>
+
+                                                    </td>
+                                                </tr>
+                                            <?php
+                                                include './CRUD/EditarTipoMoneda.php';
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
                             </div>
+
+                            <br>
+
+
+
                             <!-- /.card-body -->
                         </div>
+
+
                     </div>
 
 
@@ -681,6 +726,7 @@ include('../../Conexion/conexion.php');
     <script src="../../recursos/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="../../recursos/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="../../recursos/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <script>
         $(function() {
             $("#example1").DataTable({
@@ -688,6 +734,15 @@ include('../../Conexion/conexion.php');
                 "autoWidth": false,
             });
             $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+            $('#example3').DataTable({
                 "paging": true,
                 "lengthChange": true,
                 "searching": true,

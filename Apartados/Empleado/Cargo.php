@@ -119,7 +119,7 @@ include('../../Conexion/conexion.php');
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link">
+                                    <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link ">
                                         <!-- <i class="nav-icon fas fa-circle"></i> -->
                                         <p>
                                             Configuración
@@ -127,14 +127,9 @@ include('../../Conexion/conexion.php');
                                         </p>
                                     </a>
                                     <ul class="nav nav-treeview">
+
                                         <li class="nav-item">
-                                            <a href="ConfiguracionEmpleado.php" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Empleados</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="./Cuadrilla.php" class="nav-link">
+                                            <a href="#" class="nav-link">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Cuadrilla</p>
                                             </a>
@@ -146,13 +141,50 @@ include('../../Conexion/conexion.php');
                                                 <p>Cargos</p>
                                             </a>
                                         </li>
+                                        <li class="nav-item">
+                                            <a href="Especialidad.php" class="nav-link ">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Especialidad</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="./ConfiguracionEmpleado.php" class="nav-link ">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Empleados</p>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>
+                                                    Unidades/Monedas
+                                                    <i class="right fas fa-angle-left"></i>
+                                                </p>
+                                            </a>
+                                            <ul class="nav nav-treeview">
+                                                <li class="nav-item">
+                                                    <a href="./UnidadDeMedida.php" class="nav-link">
+                                                        <i class="far fa-dot-circle nav-icon"></i>
+                                                        <p>Unidad de medida</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <i class="far fa-dot-circle nav-icon"></i>
+                                                        <p>Monedas</p>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
 
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link ">
                                 <!-- <i class="nav-icon fas fa-chart-pie"></i> -->
                                 <p>
                                     Adquisiciones
@@ -161,7 +193,7 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="FichaProveedor.php" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ficha Proveedor</p>
                                     </a>
@@ -179,7 +211,7 @@ include('../../Conexion/conexion.php');
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="../Adquisiciones/IngresarCompra.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ingresar Compra</p>
                                     </a>
@@ -404,7 +436,48 @@ include('../../Conexion/conexion.php');
                                         </p>
                                     </a>
                                 </li>
-
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Presupuesto
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cotización
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Conformación Servicio
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Reportes especificos
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cuadros de mando Soporte Mantención
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Correos Informativos y Alertas
+                                        </p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
 
@@ -450,18 +523,15 @@ include('../../Conexion/conexion.php');
                         </li>
 
 
+
+
+
+
                     </ul>
                     </li>
 
 
-
-
-
-
-
-
-
-                    </ul> -->
+                    </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
@@ -597,7 +667,7 @@ include('../../Conexion/conexion.php');
                                                 <tr>
                                                     <td><?php echo $filas['Nombre_Cargo'] ?></td>
                                                     <td>
-                                                        <a href="../../CRUD/DELETE_tipocuadrilla.php?id=<?php echo $filas['id_cargo'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
+                                                        <a href="../../CRUD/DELETE_Cargo.php?id=<?php echo $filas['id_cargo'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
                                                         <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#crud<?php echo $filas['id_cargo']; ?>"><i class="fas fa-edit"></i></button>
 
                                                     </td>

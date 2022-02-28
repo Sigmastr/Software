@@ -119,16 +119,66 @@ include('../../Conexion/conexion.php');
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Configuración</p>
+                  <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link ">
+                    <!-- <i class="nav-icon fas fa-circle"></i> -->
+                    <p>
+                      Configuración
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
                   </a>
-                </li>
-                <li class="nav-item">
-                  <a href="../Maestro/Maestro.php" class=" nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Maestros</p>
-                  </a>
+                  <ul class="nav nav-treeview">
+
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Cuadrilla</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="Cargo.php" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Cargos</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="Especialidad.php" class="nav-link active">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Especialidad</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./ConfiguracionEmpleado.php" class="nav-link ">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Empleados</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                          Unidades/Monedas
+                          <i class="right fas fa-angle-left"></i>
+                        </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                          <a href="./UnidadDeMedida.php" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Unidad de medida</p>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>Monedas</p>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>

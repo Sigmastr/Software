@@ -8,7 +8,7 @@ include('../../Conexion/conexion.php');
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Maestro Software</title>
+    <title>Configuración</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
     <!-- Font Awesome Icons -->
@@ -40,7 +40,26 @@ include('../../Conexion/conexion.php');
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
-
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
 
 
 
@@ -51,7 +70,11 @@ include('../../Conexion/conexion.php');
                         <i class="fas fa-expand-arrows-alt"></i>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
 
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -59,8 +82,8 @@ include('../../Conexion/conexion.php');
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="#" class="brand-link">
-                <!-- <img src="../../recursos/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8" /> -->
+            <a href="index3.html" class="brand-link">
+                <img src="../../recursos/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8" />
                 <span class="brand-text font-weight-light">SegProject</span>
             </a>
 
@@ -81,7 +104,7 @@ include('../../Conexion/conexion.php');
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="../MenuAdministrador/administrador.php" class="nav-link">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> ícono descriptivo -->
                                 <p>
                                     Administrador
@@ -90,27 +113,78 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../MenuAdministrador/administrador.php" class="nav-link ">
+                                    <a href="../MenuAdministrador/administrador.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Inicio</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Configuración</p>
+                                    <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link ">
+                                        <!-- <i class="nav-icon fas fa-circle"></i> -->
+                                        <p>
+                                            Configuración
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
                                     </a>
+                                    <ul class="nav nav-treeview">
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Cuadrilla</p>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="Cargo.php" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Cargos</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="Especialidad.php" class="nav-link active">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Especialidad</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="./ConfiguracionEmpleado.php" class="nav-link ">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Empleados</p>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>
+                                                    Unidades/Monedas
+                                                    <i class="right fas fa-angle-left"></i>
+                                                </p>
+                                            </a>
+                                            <ul class="nav nav-treeview">
+                                                <li class="nav-item">
+                                                    <a href="./UnidadDeMedida.php" class="nav-link">
+                                                        <i class="far fa-dot-circle nav-icon"></i>
+                                                        <p>Unidad de medida</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <i class="far fa-dot-circle nav-icon"></i>
+                                                        <p>Monedas</p>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="../Maestro/Maestro.php" class="nav-link active">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Maestros</p>
-                                    </a>
-                                </li>
+
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link active">
                                 <!-- <i class="nav-icon fas fa-chart-pie"></i> -->
                                 <p>
                                     Adquisiciones
@@ -119,7 +193,7 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../Adquisiciones/FichaProveedor.php" class="nav-link">
+                                    <a href="FichaProveedor.php" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ficha Proveedor</p>
                                     </a>
@@ -157,7 +231,7 @@ include('../../Conexion/conexion.php');
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link ">
+                            <a href="#" class="nav-link">
                                 <!-- <i class="nav-icon fas fa-tree"></i> -->
                                 <p>
                                     Bodega
@@ -166,7 +240,7 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../Bodega/Bodega.php" class="nav-link ">
+                                    <a href="../Bodega/Bodega.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ficha Bodega</p>
                                     </a>
@@ -220,14 +294,14 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Estado ST - SM - SD - SP
                                         </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href#" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Conformación Servicio ST - SM - SD - SP
                                         </p>
@@ -235,7 +309,7 @@ include('../../Conexion/conexion.php');
                                 </li>
                                 <!-- <li class="nav-header">Servicio Tecnico</li> -->
                                 <li class="nav-item">
-                                    <a href#" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Solicitud de ST
                                         </p>
@@ -408,16 +482,16 @@ include('../../Conexion/conexion.php');
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link ">
                                 <!-- <i class="nav-icon fas fa-table"></i> -->
                                 <p>
                                     Cliente
-                                    <i class="fas fa-angle-left right"></i>
+                                    <i class="fas fa-angle-left right "></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../Cliente/FichaCliente.php" class="nav-link">
+                                    <a href="../Cliente/FichaCliente.php" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ficha Cliente
                                         </p>
@@ -457,16 +531,8 @@ include('../../Conexion/conexion.php');
                     </li>
 
 
-
-
-
-
-
-
-
                     </ul>
                 </nav>
-
                 <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
@@ -479,7 +545,7 @@ include('../../Conexion/conexion.php');
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Sección Maestro</h1>
+                            <h1 class="m-0">Configuración Especialidad</h1>
                         </div>
                         <!-- /.col -->
 
@@ -508,198 +574,6 @@ include('../../Conexion/conexion.php');
                                     <!-- Aquí poner los botones -->
                                     <!-- Button trigger modal -->
                                     <div class="botones" style="margin-bottom:1%; margin-top:1%">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Umedida">
-                                            Agregar Unidad de Medida
-                                        </button>
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Moneda">
-                                            Agregar Tipo de moneda
-                                        </button>
-
-                                    </div>
-
-                                    <!-- Modal -->
-
-
-
-
-                                    <div class="modal fade" id="Umedida" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header" style="background-color:#3f668d">
-                                                    <h5 class="modal-title" style="color:white" id="exampleModalLabel">Agregar Unidad de medida</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-
-
-                                                    <form method="POST" action="../../PhP/INSERTAR_Umedida.php">
-                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
-                                                            Unidad de Medida</h4>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Unidad:</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="Umedida" placeholder="Centímetros/Metros/milímetros">
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                    <button type="submit" class="btn btn-primary">Agregar</button>
-                                                </div>
-                                                </form>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="modal fade" id="Moneda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header" style="background-color:#3f668d">
-                                                    <h5 class="modal-title" style="color:white" id="exampleModalLabel">Agregar tipo de moneda</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-
-
-                                                    <form method="POST" action="../../PhP/INSERTAR_moneda.php">
-                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
-                                                            Ingrese la divisa</h4>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Divisa:</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="moneda" placeholder="Euro, Peso Chileno, Peso Argentino, Dolar, etc">
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                    <button type="submit" class="btn btn-primary">Agregar</button>
-                                                </div>
-                                                </form>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="modal fade" id="Especialidad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header" style="background-color:#3f668d">
-                                                    <h5 class="modal-title" style="color:white" id="exampleModalLabel">Agregar Especialidad</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-
-
-                                                    <form method="POST" action="../../PhP/INSERTAR_especialidad.php">
-                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
-                                                            Ingrese la especialidad</h4>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Nombre:</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="nombre" placeholder="MANTENCIÓN SISTEMA DE CCTV...">
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                    <button type="submit" class="btn btn-primary">Agregar</button>
-                                                </div>
-                                                </form>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-
-
-
-                                </div>
-                                <!-- /.card-header -->
-                                <div class="card-body">
-                                    <table id="example2" class="table table-bordered table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>Unidad</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            $sql = "SELECT * FROM bodega";
-                                            //ver como mostrar el nombre en vez del cargo
-
-                                            $resultado = mysqli_query($conn, $sql);
-                                            while ($filas = mysqli_fetch_array($resultado)) {
-                                                $var = $filas['Comuna_id'];
-                                                $sql2 = "SELECT * FROM comuna where id_comuna=$var";
-                                                $resultado2 = mysqli_query($conn, $sql2);
-                                                $nombrecomu = mysqli_fetch_array($resultado2);
-                                                $var2 = $filas['Rut_Encargado'];
-                                                $sql3 = "SELECT * FROM empleado where Rut_Empleado='$var2'";
-                                                $resultado3 = mysqli_query($conn, $sql3);
-                                                $datosEmpleado = mysqli_fetch_array($resultado3);
-                                            ?>
-                                                <tr>
-                                                    <td><?php echo $filas['Nombre_Bodega'] ?></td>
-                                                    <td><?php echo $filas['Direccion'] ?></td>
-
-
-                                                    <!-- Consulta para tener el telefono del empleado y el nombre de la comuna -->
-                                                    <td><?php echo $nombrecomu['Nombre_comuna'] ?></td>
-                                                    <td><?php echo $filas['Email'] ?></td>
-                                                    <td><?php echo $datosEmpleado['Nombre'] ?></td>
-                                                    <td><?php echo $datosEmpleado['Telefono'] ?></td>
-                                                    <td>
-                                                        <a href="../../CRUD/DELETE_Bodega.php?id=<?php echo $filas['Codigo_bodega'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
-                                                        <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#update_bodega<?php echo $filas['Codigo_bodega']; ?>"><i class="fas fa-edit"></i></button>
-                                                    </td>
-                                                </tr>
-                                            <?php
-                                                // include 'editarmodalbodega.php';
-                                            }
-
-                                            ?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <!-- Aquí poner los botones -->
-                                    <!-- Button trigger modal -->
-                                    <div class="botones" style="margin-bottom:1%; margin-top:1%">
-
                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Especialidad">
                                             Agregar Especialidad
                                         </button>
@@ -708,12 +582,6 @@ include('../../Conexion/conexion.php');
                                     </div>
 
                                     <!-- Modal -->
-
-
-
-
-
-
                                     <div class="modal fade" id="Especialidad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-lg" role="document">
                                             <div class="modal-content">
@@ -735,7 +603,7 @@ include('../../Conexion/conexion.php');
                                                                 <div class="input-group-prepend">
                                                                     <div class="input-group-text"><i class="fas fa-user"></i>
                                                                     </div>
-                                                                    <input type="text" class="form-control" name="nombre" placeholder="MANTENCIÓN SISTEMA DE CCTV...">
+                                                                    <input type="text" class="form-control" name="nombre" placeholder="Mantenimiento, instalaciones, etc">
                                                                 </div>
 
                                                             </div>
@@ -755,73 +623,80 @@ include('../../Conexion/conexion.php');
                                     </div>
 
 
-
-
                                 </div>
-                                <!-- /.card-header -->
-                                <div class="card-body">
-                                    <table id="example1" class="table table-bordered table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>Nombre de especialidad</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            $sql = "SELECT * FROM especialidad";
-                                            //ver como mostrar el nombre en vez del cargo
 
-                                            $resultado = mysqli_query($conn, $sql);
-                                            while ($filas = mysqli_fetch_array($resultado)) {
-
-                                            ?>
-                                                <tr>
-                                                    <td><?php echo $filas['Nombre'] ?></td>
-
-                                                    <td>
-                                                        <a href="../../CRUD/DELETE_especialidad.php?id=<?php echo $filas['id_Especialidad'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
-                                                        <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#Especialidad<?php echo $filas['id_Especialidad']; ?>"><i class="fas fa-edit"></i></button>
-                                                    </td>
-                                                </tr>
-                                            <?php
-                                                include 'editarespecialidad.php';
-                                            }
-
-                                            ?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /.card-body -->
                             </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table id="example1" class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre de especialidad</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $sql = "SELECT * FROM especialidad";
+                                        //ver como mostrar el nombre en vez del cargo
+
+                                        $resultado = mysqli_query($conn, $sql);
+                                        while ($filas = mysqli_fetch_array($resultado)) {
+
+                                        ?>
+                                            <tr>
+                                                <td><?php echo $filas['Nombre'] ?></td>
+
+                                                <td>
+                                                    <a href="../../CRUD/DELETE_especialidad.php?id=<?php echo $filas['id_Especialidad'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
+                                                    <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#Especialidad<?php echo $filas['id_Especialidad']; ?>"><i class="fas fa-edit"></i></button>
+                                                </td>
+                                            </tr>
+                                        <?php
+                                            include 'editarespecialidad.php';
+                                        }
+
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <br>
+
+
+
+                            <!-- /.card-body -->
                         </div>
 
 
-
-
-
-
-
                     </div>
-                    <!-- /.row -->
+
+
+
+
+
+
+
                 </div>
-                <!-- /.container-fluid -->
+                <!-- /.row -->
             </div>
-            <!-- /.content -->
+            <!-- /.container-fluid -->
         </div>
-        <!-- /.content-wrapper -->
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
 
 
 
-        <!-- Main Footer -->
-        <footer class="main-footer">
-            <strong>Propiedad de Mline 2021
-                <a href="https://mlineseg.wixsite.com/website">Mline</a>.</strong>
-            Todos los derechos reservados
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Versión</b> 1.0
-            </div>
-        </footer>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <strong>Propiedad de Mline 2021
+            <a href="https://mlineseg.wixsite.com/website">Mline</a>.</strong>
+        Todos los derechos reservados
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Versión</b> 1.0
+        </div>
+    </footer>
     </div>
     <!-- ./wrapper -->
 
@@ -845,6 +720,7 @@ include('../../Conexion/conexion.php');
     <script src="../../recursos/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="../../recursos/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="../../recursos/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <script>
         $(function() {
             $("#example1").DataTable({
@@ -852,6 +728,15 @@ include('../../Conexion/conexion.php');
                 "autoWidth": false,
             });
             $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+            $('#example3').DataTable({
                 "paging": true,
                 "lengthChange": true,
                 "searching": true,

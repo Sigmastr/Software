@@ -10,10 +10,11 @@
             <div class="modal-body">
 
 
-                <form method="POST" action="../../PhP/EDITAR_cuadrilla.php" id="cargo">
+                <form method="POST" action="../../CRUD/UPDATE_tipocuadrilla.php" id="cargo">
                     <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
                         Datos de la creación de cuadrilla</h4>
                     <div class="form-row">
+                        <input hidden type="text" value="<?php echo $filas['id_personal']; ?>" name="id">
                         <div class="form-group col-md-6">
                             <label for="inputAlias">Alias de la cuadrilla:</label>
                             <div class="input-group-prepend">

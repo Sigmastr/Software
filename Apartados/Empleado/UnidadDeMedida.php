@@ -8,7 +8,7 @@ include('../../Conexion/conexion.php');
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Configuración Cuadrilla</title>
+    <title>Configuración</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
     <!-- Font Awesome Icons -->
@@ -104,7 +104,7 @@ include('../../Conexion/conexion.php');
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item">
-                            <a href="../MenuAdministrador/administrador.php" class="nav-link active">
+                            <a href="../MenuAdministrador/administrador.php" class="nav-link">
                                 <!-- <i class="nav-icon fas fa-tachometer-alt"></i> ícono descriptivo -->
                                 <p>
                                     Administrador
@@ -129,7 +129,7 @@ include('../../Conexion/conexion.php');
                                     <ul class="nav nav-treeview">
 
                                         <li class="nav-item">
-                                            <a href="./Cuadrilla.php" class="nav-link active">
+                                            <a href="#" class="nav-link">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Cuadrilla</p>
                                             </a>
@@ -164,7 +164,7 @@ include('../../Conexion/conexion.php');
                                             </a>
                                             <ul class="nav nav-treeview">
                                                 <li class="nav-item">
-                                                    <a href="./UnidadDeMedida.php" class="nav-link">
+                                                    <a href="./UnidadDeMedida.php" class="nav-link active">
                                                         <i class="far fa-dot-circle nav-icon"></i>
                                                         <p>Unidad de medida</p>
                                                     </a>
@@ -545,7 +545,7 @@ include('../../Conexion/conexion.php');
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Sección Empleados</h1>
+                            <h1 class="m-0">Configuración de Unidades de Medidas</h1>
                         </div>
                         <!-- /.col -->
 
@@ -574,20 +574,19 @@ include('../../Conexion/conexion.php');
                                     <!-- Aquí poner los botones -->
                                     <!-- Button trigger modal -->
                                     <div class="botones" style="margin-bottom:1%; margin-top:1%">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#FichaCuadrilla">
-                                            Ingresar Cuadrilla
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Umedida">
+                                            Agregar Unidad de Medida
                                         </button>
+
 
                                     </div>
 
                                     <!-- Modal -->
-
-
-                                    <div class="modal fade" id="FichaCuadrilla" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="Umedida" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-lg" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header" style="background-color:#3f668d">
-                                                    <h5 class="modal-title" style="color:white" id="exampleModalLabel">Ficha Cuadrilla</h5>
+                                                    <h5 class="modal-title" style="color:white" id="exampleModalLabel">Agregar Unidad de medida</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -595,32 +594,20 @@ include('../../Conexion/conexion.php');
                                                 <div class="modal-body">
 
 
-                                                    <form method="POST" action="../../PhP/INSERTAR_TIPOCUADRILLA.php">
+                                                    <form method="POST" action="../../PhP/INSERTAR_Umedida.php">
                                                         <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
-                                                            Datos de cupos de la cuadrilla</h4>
+                                                            Unidad de Medida</h4>
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Tipo de cuadrilla</label>
+                                                                <label for="inputNombreEmpleado">Unidad:</label>
                                                                 <div class="input-group-prepend">
                                                                     <div class="input-group-text"><i class="fas fa-user"></i>
                                                                     </div>
-                                                                    <input type="text" class="form-control" name="TipoCuadrilla" id="TipoCuadrilla" placeholder="Solitario/duo">
+                                                                    <input type="text" class="form-control" name="Umedida" placeholder="Centímetros/Metros/milímetros">
                                                                 </div>
 
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Nombre del grupo de trabajo:</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="Alias" id="Alias" placeholder="Grupo 1, Electricistas">
-                                                                </div>
-
-                                                            </div>
-                                                            <!-- Estado de cuadrilla creado por defecto como desocupado -->
-
                                                         </div>
-
 
                                                 </div>
                                                 <div class="modal-footer">
@@ -634,32 +621,28 @@ include('../../Conexion/conexion.php');
 
                                         </div>
                                     </div>
+
+
                                 </div>
 
                             </div>
                             <!-- /.card-header -->
-
-                            <!-- /.card-body -->
-                        </div>
-                        <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Información de Cuadrilla</h3>
+                                    <h3 class="card-title">Información de Unidad de Medida</h3>
                                 </div>
-                                <!-- /.card-header -->
                                 <div class="card-body">
-                                    <table id="example3" class="table table-bordered table-hover">
+                                    <table id="example2" class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th>Alias</th>
-                                                <th>Tipo_cuadrilla</th>
-                                                <th>Estado</th>
+                                                <th>Nombre</th>
+
                                                 <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $sql = "SELECT * FROM cuadrilla";
+                                            $sql = "SELECT * FROM unidadmedida ";
                                             //ver como mostrar el nombre en vez del cargo
 
                                             $resultado = mysqli_query($conn, $sql);
@@ -667,27 +650,31 @@ include('../../Conexion/conexion.php');
 
                                             ?>
                                                 <tr>
-                                                    <td><?php echo $filas['Alias']; ?></td>
-                                                    <td><?php echo $filas['Tipo_cuadrilla']; ?></td>
-                                                    <td><?php echo $filas['Estado']; ?></td>
-
+                                                    <td><?php echo $filas['Nombre'] ?></td>
                                                     <td>
-                                                        <a href="../../CRUD/DELETE_tipocuadrilla.php?id=<?php echo $filas['id_personal'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
-                                                        <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#crud<?php echo $filas['id_personal']; ?>"><i class="fas fa-edit"></i></button>
+                                                        <a href="../../CRUD/DELETE_Umedida.php?id=<?php echo $filas['ID_UnidadMedida'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
+                                                        <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#crud<?php echo $filas['ID_UnidadMedida']; ?>"><i class="fas fa-edit"></i></button>
 
                                                     </td>
                                                 </tr>
                                             <?php
-                                                include './CRUD/EditarCuadrilla.php';
+                                                include './CRUD/EditarUmedida.php';
                                             }
                                             ?>
                                         </tbody>
                                     </table>
+
+
                                 </div>
-                                <!-- /.card-body -->
                             </div>
 
+                            <br>
+
+
+
+                            <!-- /.card-body -->
                         </div>
+
 
                     </div>
 

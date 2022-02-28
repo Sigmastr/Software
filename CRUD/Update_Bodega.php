@@ -23,6 +23,4 @@ if ($resultado) {
     echo "<script>alert('Registrado con éxito')</script>";
     header('Location:../Apartados/Bodega/Bodega.php');
     die;
-} else {
-    echo    'no';
 }

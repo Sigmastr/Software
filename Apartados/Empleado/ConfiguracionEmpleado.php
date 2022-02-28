@@ -119,7 +119,7 @@ include('../../Conexion/conexion.php');
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link">
+                                    <a href="../Empleado/ConfiguracionEmpleado.php" class="nav-link ">
                                         <!-- <i class="nav-icon fas fa-circle"></i> -->
                                         <p>
                                             Configuración
@@ -127,12 +127,7 @@ include('../../Conexion/conexion.php');
                                         </p>
                                     </a>
                                     <ul class="nav nav-treeview">
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link active">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Empleados</p>
-                                            </a>
-                                        </li>
+
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
                                                 <i class="far fa-circle nav-icon"></i>
@@ -141,10 +136,47 @@ include('../../Conexion/conexion.php');
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="#" class="nav-link">
+                                            <a href="Cargo.php" class="nav-link">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Cargos</p>
                                             </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="Especialidad.php" class="nav-link ">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Especialidad</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="./ConfiguracionEmpleado.php" class="nav-link active">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Empleados</p>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>
+                                                    Unidades/Monedas
+                                                    <i class="right fas fa-angle-left"></i>
+                                                </p>
+                                            </a>
+                                            <ul class="nav nav-treeview">
+                                                <li class="nav-item">
+                                                    <a href="./UnidadDeMedida.php" class="nav-link">
+                                                        <i class="far fa-dot-circle nav-icon"></i>
+                                                        <p>Unidad de medida</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <i class="far fa-dot-circle nav-icon"></i>
+                                                        <p>Monedas</p>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
                                         </li>
                                     </ul>
                                 </li>
@@ -152,7 +184,7 @@ include('../../Conexion/conexion.php');
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link ">
                                 <!-- <i class="nav-icon fas fa-chart-pie"></i> -->
                                 <p>
                                     Adquisiciones
@@ -161,7 +193,7 @@ include('../../Conexion/conexion.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="FichaProveedor.php" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ficha Proveedor</p>
                                     </a>
@@ -179,7 +211,7 @@ include('../../Conexion/conexion.php');
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="../Adquisiciones/IngresarCompra.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ingresar Compra</p>
                                     </a>
@@ -404,7 +436,48 @@ include('../../Conexion/conexion.php');
                                         </p>
                                     </a>
                                 </li>
-
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Presupuesto
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cotización
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Conformación Servicio
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Reportes especificos
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cuadros de mando Soporte Mantención
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Correos Informativos y Alertas
+                                        </p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
 
@@ -450,18 +523,15 @@ include('../../Conexion/conexion.php');
                         </li>
 
 
+
+
+
+
                     </ul>
                     </li>
 
 
-
-
-
-
-
-
-
-                    </ul> -->
+                    </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
@@ -507,12 +577,7 @@ include('../../Conexion/conexion.php');
                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#FichaEmpleado">
                                             Ingresar Empleado
                                         </button>
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#CrearCargo">
-                                            Crear Cargo
-                                        </button>
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#FichaCuadrilla">
-                                            Ingresar Cuadrilla
-                                        </button>
+
 
                                     </div>
 
@@ -634,99 +699,8 @@ include('../../Conexion/conexion.php');
 
                                         </div>
                                     </div>
-                                    <div class="modal fade" id="CrearCargo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header" style="background-color:#3f668d">
-                                                    <h5 class="modal-title" style="color:white" id="exampleModalLabel">Ficha Cargo</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
 
 
-                                                    <form method="POST" action="../../PhP/INSERTAR_CARGO.php" id="cargo">
-                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
-                                                            Datos del Cargo</h4>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Nombre del Cargo</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="NombreCargo" id="NombreCargo" placeholder="Ingrese nombre del cargo">
-                                                                </div>
-
-                                                            </div>
-
-
-                                                        </div>
-
-
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                    <button type="submit" class="btn btn-primary" onClick='return enviarFormulario();'>Agregar</button>
-                                                </div>
-                                                </form>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="modal fade" id="FichaCuadrilla" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header" style="background-color:#3f668d">
-                                                    <h5 class="modal-title" style="color:white" id="exampleModalLabel">Ficha Cuadrilla</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-
-
-                                                    <form method="POST" action="../../PhP/INSERTAR_TIPOCUADRILLA.php">
-                                                        <h4 style="font-size:20px;font-weight:bold;margin:auto;margin-bottom:4px;border-bottom-style: solid;border-bottom-color: #00c0ef;">
-                                                            Datos de cupos de la cuadrilla</h4>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Tipo de cuadrilla</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="TipoCuadrilla" id="TipoCuadrilla" placeholder="Solitario/duo">
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="inputNombreEmpleado">Nombre del grupo de trabajo:</label>
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i class="fas fa-user"></i>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" name="Alias" id="Alias" placeholder="Grupo 1, Electricistas">
-                                                                </div>
-
-                                                            </div>
-                                                            <!-- Estado de cuadrilla creado por defecto como desocupado -->
-
-                                                        </div>
-
-
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                    <button type="submit" class="btn btn-primary">Agregar</button>
-                                                </div>
-                                                </form>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
                                 </div>
 
                             </div>
@@ -783,7 +757,7 @@ include('../../Conexion/conexion.php');
                                                     </td>
                                                 </tr>
                                             <?php
-                                                include 'EditarEmpleado.php';
+                                                include './CRUD/EditarEmpleado.php';
                                             }
                                             ?>
                                         </tbody>
@@ -799,53 +773,7 @@ include('../../Conexion/conexion.php');
 
                             <!-- /.card-body -->
                         </div>
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Información de Cuadrilla</h3>
-                                </div>
-                                <!-- /.card-header -->
-                                <div class="card-body">
-                                    <table id="example3" class="table table-bordered table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>Alias</th>
-                                                <th>Tipo_cuadrilla</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            $sql = "SELECT * FROM cuadrilla";
-                                            //ver como mostrar el nombre en vez del cargo
 
-                                            $resultado = mysqli_query($conn, $sql);
-                                            while ($filas = mysqli_fetch_array($resultado)) {
-
-
-                                            ?>
-                                                <tr>
-                                                    <td><?php echo $filas['Alias'] ?></td>
-                                                    <td><?php echo $filas['Tipo_cuadrilla'] ?></td>
-
-
-                                                    <td>
-                                                        <a href="../../CRUD/DELETE_tipocuadrilla.php?id=<?php echo $filas['id_personal'] ?>"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
-                                                        <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#crud<?php echo $filas['id_personal']; ?>"><i class="fas fa-edit"></i></button>
-
-                                                    </td>
-                                                </tr>
-                                            <?php
-                                                include 'EditarCuadrilla.php';
-                                            }
-                                            ?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-
-                        </div>
 
                     </div>
 
